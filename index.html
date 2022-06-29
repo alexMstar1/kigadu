@@ -1,13 +1,283 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/css/main.css">
-  <title>Document</title>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- styles -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./styles/css/main.css">
+
+    <title>Kigadu</title>
 </head>
 <body>
-  
+
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <nav class="d-flex justify-content-between">
+                    <div class="col col-md-3">
+                        <div class="header__logo">
+                            <img src="assets/img/15-layers.svg" alt="">
+                        </div>
+                    </div>
+                    <ul class="col col-md-7 header__menu header-menu d-flex justify-content-between align-items-end">
+                        <li class="header-menu__item"><a href="">download</a></li>
+                        <li class="header-menu__item"><a href="">funktionen</a></li>
+                        <li class="header-menu__item"><a href="">aktivierung</a></li>
+                        <li class="header-menu__item"><a href="">faq</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" class="main">
+        <div class="container">
+            <div class="row d-flex justify-content-between">
+                <div class="col col-md-5">
+                    <h1 class="main__title">
+                        Die Kigadu Eltern-App
+                    </h1>
+                    <p class="main__desc">
+                        Per App mit Ihrer Kinderbetreuungs-Einrichtung kommunizieren. Wichtige Push-Up-Mitteilungen direkt auf Ihr Smartphone. Kind krank melden und wichtige Stammdaten und Notfallkontakte verwalten.
+                    </p>
+                </div>
+                <div class="col col-md-6">
+                    <div class="main__phone-slider phone-slider">
+                        <div class="main__circle1"></div>
+                        <div class="main__circle2"></div>
+                        <div class="main__circle3"></div>
+
+                        <div class="phone-slider_wrapper">
+                            <!-- Swiper -->
+                            <div class="swiper phone-slider__swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./assets/img/phone-slider/1.svg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./assets/img/phone-slider/1.svg" alt="">
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="download" class="download">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-6">
+                    <h2>
+                        <span class="selected">Jetzt App downloaden</span> & mit Ihrem Kindergarten kommunizieren!
+                    </h2>
+                    <div class="header__download-links">
+                        <a href="#">
+                            <img src="" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="mwcontroll-slider"></div>
+        </div>
+    </section>
+
+    <section id="video" class="video">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-12">
+                    <h2>
+                        Die Kigadu Eltern-App in 60 Sekunden erklärt
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-md-12">
+                    <div class="video__content">
+                        <video src=""></video>
+                    </div>
+                </div>
+            </div>
+            <div class="mwcontroll-slider"></div>
+        </div>
+    </section>
+
+    <section id="functions" class="functions">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-12">
+                    <h2>
+                        <span class="selected">Die Funktionen der App</span>
+                    </h2>
+                    <p>
+                        Der neue Kigadu-Messenger bietet viele Funktionen, um die Kommunikation zwischen Eltern und Pädagog*innen zu erleichtern. Der Funktionsumfang wird laufend erweitert.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-md-12">
+                    <div class="functions__slider slider">
+                        <div class="slider__item item">
+                            <img src="" alt="" class="item__thumb">
+                            <h3>Die Kigadu Eltern-App</h3>
+                            <p>Schnell und einfach mit Ihrer Kinderbetreuungs-einrichtung kommuni-zieren.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mwcontroll-slider"></div>
+        </div>
+    </section>
+
+    <section id="activation" class="activation">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-12">
+                    <div class="activation__steps">
+                        1 -> 2 -> 3
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-md-4">
+                    <img src="" alt="" class="activation_thumb">
+                    <h2>Kindergarten informiert</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error atque harum quisquam? Modi perspiciatis aliquid eum saepe eveniet! Odit ad laboriosam ut ex ea, voluptatibus quia sapiente ab voluptates possimus.</p>
+                </div>
+                <div class="col col-md-4">
+                    <img src="" alt="" class="activation_thumb">
+                    <h2>E-Mail-Adresse bestätigen</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error atque harum quisquam? Modi perspiciatis aliquid eum saepe eveniet! Odit ad laboriosam ut ex ea, voluptatibus quia sapiente ab voluptates possimus.</p>
+                </div>
+                <div class="col col-md-4">
+                    <img src="" alt="" class="activation_thumb">
+                    <h2>App downloaden & einsteigen</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error atque harum quisquam? Modi perspiciatis aliquid eum saepe eveniet! Odit ad laboriosam ut ex ea, voluptatibus quia sapiente ab voluptates possimus.</p>
+                </div>
+            </div>
+            <div class="mwcontroll-slider"></div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-12">
+                    <h2>
+                        <span class="selected">Häufig gestellte Fragen</span>
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col col-md-12">
+                    <div class="faq__toggle-btn">
+                        <i class="fa-solid fa-angle-up"></i>
+                    </div>
+                    <h2 class="faq__question">
+                        Passwort vergessen, was nun?
+                    </h2>
+                    <p class="faq_answer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto eum officia corporis obcaecati odio esse dolore dolorem nihil accusamus rerum rem officiis ipsum, necessitatibus magni temporibus iure vel nisi?
+                    </p>
+                </div>
+                <div class="col col-md-12">
+                    <div class="faq__toggle-btn">
+                        <i class="fa-solid fa-angle-up"></i>
+                    </div>
+                    <h2 class="faq__question">
+                        Ich habe keine Anmeldedaten, was kann ich tun?
+                    </h2>
+                    <p class="faq_answer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto eum officia corporis obcaecati odio esse dolore dolorem nihil accusamus rerum rem officiis ipsum, necessitatibus magni temporibus iure vel nisi?
+                    </p>
+                </div>
+                <div class="col col-md-12">
+                    <div class="faq__toggle-btn">
+                        <i class="fa-solid fa-angle-up"></i>
+                    </div>
+                    <h2 class="faq__question">
+                        Wie kann ich die Essensbestellung meines Kindes ändern?
+                    </h2>
+                    <p class="faq_answer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto eum officia corporis obcaecati odio esse dolore dolorem nihil accusamus rerum rem officiis ipsum, necessitatibus magni temporibus iure vel nisi?
+                    </p>
+                </div>
+                <div class="col col-md-12">
+                    <div class="faq__toggle-btn">
+                        <i class="fa-solid fa-angle-up"></i>
+                    </div>
+                    <h2 class="faq__question">
+                        Ich möchte die Sprache ändern, wie geht das?
+                    </h2>
+                    <p class="faq_answer">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto architecto eum officia corporis obcaecati odio esse dolore dolorem nihil accusamus rerum rem officiis ipsum, necessitatibus magni temporibus iure vel nisi?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col col-md-6">
+                    <div class="footer__logo">
+                        <img src="" alt="">
+                    </div>
+                    <div class="footer__tagline">
+                        <h4>
+                            Kindergarten. Einfach. Verwalten.
+                        </h4>
+                        <p>
+                            Die Web-Applikation für Ihre Kinderbetreuungseinrichtung.
+                        </p>
+                    </div>
+                </div>
+                <div class="col col-md-3">
+                    <div class="footer__ask">
+                        <h4>
+                            Noch Fragen?
+                        </h4>
+                        <p>
+                            Wenden Sie sich einfach an Ihre Kindergarten. Einfach. Verwalten. Kinderbetreuungseinrichtung!
+                        </p>
+                    </div>
+                    <div class="footer__links d-flex">
+                        <a href="#">impressum</a>
+                        <a href="#">datenschutz</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".phone-slider__swiper", {
+        rewind: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+
 </body>
 </html>
