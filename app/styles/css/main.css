@@ -250,7 +250,7 @@ p {
       .faq .faq-question__wrapper.active .question__text {
         background: #88BAC2;
         display: inline-block;
-        padding: 15px 20px 5px 20px; }
+        padding: 20px 0 0 0; }
       .faq .faq-question__wrapper.active .faq__question {
         padding: 0 0 20px 0; }
       .faq .faq-question__wrapper.active .faq__answer {
@@ -259,12 +259,13 @@ p {
       border-bottom: 4px solid #E6E7E7; }
     .faq .faq-question__wrapper .faq__question {
       cursor: pointer;
-      padding: 20px 0; }
+      padding: 0 0 20px 0; }
       .faq .faq-question__wrapper .faq__question .question__text {
         color: #424241;
         font-family: "Atrament Medium", "Arial", sans-serif;
         font-weight: 500;
-        font-size: 70px; }
+        font-size: 70px;
+        padding: 20px; }
     .faq .faq-question__wrapper .question__toggle {
       display: flex;
       justify-content: center;
