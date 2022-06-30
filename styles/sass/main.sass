@@ -1,0 +1,332 @@
+@import '_base.sass'
+@import '_fonts'
+  
+*
+  margin: 0  
+  padding: 0 
+  border: 0
+
+body
+  overflow-x: hidden
+
+p
+  font-family: $ms500
+  font-size: 24px
+  color: $secondary1
+
+.selected
+  background: $primary2
+  display: inline-block
+  padding: 15px 20px 5px 20px
+
+.header
+  margin-top: 240px
+  position: relative
+  .header__logo
+    position: relative
+    img
+      position: absolute
+      bottom: -146px
+      height: 300px
+      width: 300px
+  .header-menu
+    list-style-type: none
+    padding: 0
+    margin: 0 0 20px 0
+    .header-menu__item
+      font-family: $ms900
+      text-transform: uppercase
+      a
+        text-decoration: none
+        font-size: 28px
+        color: $secondary1
+
+.main 
+  background: $secondary4
+  padding: 200px 0 90px 0
+  overflow-x: hidden
+  .main__title
+    font-size: 75px
+    color: $primary1
+    font-family: $atrBold
+    font-weight: 700
+  .main__desc
+    font-family: $ms500
+    font-size: 24px
+    color: $secondary1
+  .phone-slider
+    position: relative
+    .main__circle1
+      position: absolute
+      overflow: hidden
+      left: 100px
+      top: -75px
+      height: 950px
+      width: 950px
+      background: $primary1
+      border-radius: 100%
+      z-index: 10
+    .main__circle2
+      position: absolute
+      overflow: hidden
+      left: 0px
+      top: -100px
+      height: 307px
+      width: 307px
+      background: $secondary2
+      border-radius: 100%
+      z-index: 9
+    .main__circle3
+      position: absolute
+      overflow: hidden
+      right: -250px
+      top: -80px
+      height: 142px
+      width: 142px
+      background: $primary4
+      border-radius: 100%
+      z-index: 8
+
+      .swiper 
+      --swiper-navigation-color: $secondary1
+      --swiper-navigation-size: 60px
+
+    .phone-slider__swiper
+      z-index: 100
+      .swiper-slide
+        text-align: center
+        font-size: 18px
+
+        /* Center slide text vertically */
+        display: -webkit-box
+        display: -ms-flexbox
+        display: -webkit-flex
+        display: flex
+        -webkit-box-pack: center
+        -ms-flex-pack: center
+        -webkit-justify-content: center
+        justify-content: center
+        -webkit-box-align: center
+        -ms-flex-align: center
+        -webkit-align-items: center
+        align-items: center
+
+        img
+          display: block
+          width: 456px
+          height: 100%
+          object-fit: cover
+      .swiper-button-prev-unique, .swiper-button-next-unique
+        cursor: pointer
+        position: absolute
+        top: 325px
+        z-index: 200
+      .swiper-button-prev-unique
+        left: -20px
+      .swiper-button-next-unique
+        right: -20px
+        transform: rotate(180deg)
+      
+
+.download
+  padding: 90px 0
+  .download__title
+    color: $secondary1
+    font-family: $atrMedium
+    font-weight: 500
+    font-size: 80px
+    margin-bottom: 35px
+  .download__links
+    a
+      text-decoration: none
+      margin-right: 20px
+      img
+        width: 200px
+
+.video
+  height: 100vh
+  .video__title
+    color: $secondary1
+    font-family: $atrMedium
+    font-weight: 500
+    font-size: 80px
+  .video__src
+    display: block
+    width: 100%
+
+.functions
+  background: $secondary4
+  padding: 90px 0
+  position: relative
+  height: 100vh
+  .functions__title
+    color: $secondary1
+    font-family: $atrMedium
+    font-weight: 500
+    font-size: 80px
+    margin-bottom: 35px
+  .functions__desc
+    text-align: center
+    width: 85%
+    margin-bottom: 120px
+  .swiper
+    --swiper-navigation-color: $secondary1
+    --swiper-navigation-size: 60px
+  .functions-slider__swiper
+    width: 90%
+    .swiper-wrapper
+      // padding: 0 50px
+    .swiper-slide
+      .item
+        padding: 0 50px
+        .item__title
+          font-size: 50px
+          color: $primary1
+          font-family: $atrBold
+          font-weight: 700
+          margin-bottom: 20px
+        .item__desc
+          font-size: 22px
+        .item__thumb
+          height: 120px
+          margin-bottom: 50px
+        h3, p
+          text-align: center
+  .swiper-button-prev-unique, .swiper-button-next-unique
+    cursor: pointer
+    position: absolute
+    top: 550px
+    z-index: 200
+  .swiper-button-prev-unique
+    left: 30px
+  .swiper-button-next-unique
+    right: 30px
+    transform: rotate(180deg)
+
+.activation
+  padding: 90px 0 0 0
+  .activation__title
+    color: $secondary1
+    font-family: $atrMedium
+    font-weight: 500
+    font-size: 80px
+  .activation__container
+    margin-top: 20px
+    padding: 75px 0 0 0 
+    background: $primary2
+    .steps
+      width: 90%
+      margin: 0 auto
+      .step__number
+        padding: 0 30px
+        font-size: 130px
+        line-height: 110px
+        font-family: $atrMedium
+        font-weight: bold
+        color: white
+    .activation__items
+      margin-top: 60px
+      padding-bottom: 90px
+      .col
+        padding: 0 40px
+      .icon-wrapper
+        margin-bottom: 30px
+      .item__title
+        text-align: center
+        color: $secondary1
+        font-family: $atrMedium
+        font-weight: 500
+        font-size: 70px
+        line-height: 80px
+        margin-bottom: 20px
+      .item__desc
+        text-align: center
+        font-size: 22px
+
+.faq
+  padding: 90px 0
+  .faq__title
+    color: $secondary1
+    font-family: $atrMedium
+    font-weight: 500
+    font-size: 80px
+    margin-bottom: 60px
+  .faq-question__wrapper
+    margin: 30px 0
+    &.active
+      background: $secondary4
+      .container
+        border-bottom: 4px solid $secondary1
+      .question__toggle
+        svg
+          transform: rotateX(180deg)
+          path
+            stroke: $secondary1
+      .question__text
+        background: $primary2
+        display: inline-block
+        padding: 20px 0 0 0
+      .faq__question
+        padding: 0 0 20px 0
+      .faq__answer
+        display: block
+    .container
+      border-bottom: 4px solid $secondary4
+    .faq__question
+      cursor: pointer
+      padding: 0 0 20px 0
+      .question__text
+        color: $secondary1
+        font-family: $atrMedium
+        font-weight: 500
+        font-size: 70px
+        padding: 20px
+    .question__toggle
+      display: flex
+      justify-content: center
+      align-items: center
+      svg
+        width: 90px
+        color: $primary1
+    .faq__answer
+        display: none
+        
+
+.footer
+  padding: 40px 0
+  background: $primary2
+  .footer__logo
+    margin-right: 40px
+    img
+      height: 200px
+  .tagline
+    .tagline__title
+      font-family: $ms900
+      color: white
+      line-height: 25px
+    .tagline__desc
+      font-family: $ms500
+      color: white
+      line-height: 30px
+  .ask
+    .ask__title
+      text-align: right
+      color: $secondary1
+      font-family: $ms900
+      line-height: 25px
+    .ask__desc
+      text-align: right
+      line-height: 30px
+  .footer__links
+    margin-bottom: 16px
+    a
+      text-decoration: none
+      color: $secondary1
+      font-family: $ms900
+      text-transform: uppercase
+      font-size: 25px
+      margin-left: 50px
+      
+  
+
+

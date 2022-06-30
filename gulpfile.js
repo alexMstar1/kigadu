@@ -4,17 +4,17 @@ const sass = require('gulp-sass')(require('node-sass'))
 
 gulp.task('serve', function () {
   browserSync.init({
-    server: "./app"
+    server: "./"
   })
 
-  gulp.watch('./app/styles/sass/**/*.sass', gulp.series('sass'))
-  gulp.watch('./app/**/*.html').on('change', browserSync.reload)
+  gulp.watch('./styles/sass/**/*.sass', gulp.series('sass'))
+  gulp.watch('./**/*.html').on('change', browserSync.reload)
 })
 
 gulp.task('sass', function () {
-  return gulp.src('./app/styles/sass/**/*.sass')
+  return gulp.src('./styles/sass/**/*.sass')
     .pipe(sass())
-    .pipe(gulp.dest('./app/styles/css'))
+    .pipe(gulp.dest('./styles/css'))
     .pipe(browserSync.stream())
 })
 
