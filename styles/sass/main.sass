@@ -87,36 +87,46 @@ p
       border-radius: 100%
       z-index: 8
 
-    .phone-slider__swiper
-      z-index: 100
-      
-    .swiper 
+      .swiper 
       --swiper-navigation-color: $secondary1
       --swiper-navigation-size: 60px
-        
-    .swiper-slide
-      text-align: center
-      font-size: 18px
 
-      /* Center slide text vertically */
-      display: -webkit-box
-      display: -ms-flexbox
-      display: -webkit-flex
-      display: flex
-      -webkit-box-pack: center
-      -ms-flex-pack: center
-      -webkit-justify-content: center
-      justify-content: center
-      -webkit-box-align: center
-      -ms-flex-align: center
-      -webkit-align-items: center
-      align-items: center
+    .phone-slider__swiper
+      z-index: 100
+      .swiper-slide
+        text-align: center
+        font-size: 18px
 
-      img
-        display: block
-        width: 456px
-        height: 100%
-        object-fit: cover
+        /* Center slide text vertically */
+        display: -webkit-box
+        display: -ms-flexbox
+        display: -webkit-flex
+        display: flex
+        -webkit-box-pack: center
+        -ms-flex-pack: center
+        -webkit-justify-content: center
+        justify-content: center
+        -webkit-box-align: center
+        -ms-flex-align: center
+        -webkit-align-items: center
+        align-items: center
+
+        img
+          display: block
+          width: 456px
+          height: 100%
+          object-fit: cover
+      .swiper-button-prev-unique, .swiper-button-next-unique
+        cursor: pointer
+        position: absolute
+        top: 325px
+        z-index: 200
+      .swiper-button-prev-unique
+        left: -20px
+      .swiper-button-next-unique
+        right: -20px
+        transform: rotate(180deg)
+      
 
 .download
   padding: 90px 0
@@ -134,17 +144,21 @@ p
         width: 200px
 
 .video
+  height: 100vh
   .video__title
     color: $secondary1
     font-family: $atrMedium
     font-weight: 500
     font-size: 80px
   .video__src
+    display: block
     width: 100%
 
 .functions
   background: $secondary4
   padding: 90px 0
+  position: relative
+  height: 100vh
   .functions__title
     color: $secondary1
     font-family: $atrMedium
@@ -161,7 +175,7 @@ p
   .functions-slider__swiper
     width: 90%
     .swiper-wrapper
-      // padding: 0 100px
+      // padding: 0 50px
     .swiper-slide
       .item
         padding: 0 50px
@@ -178,6 +192,16 @@ p
           margin-bottom: 50px
         h3, p
           text-align: center
+  .swiper-button-prev-unique, .swiper-button-next-unique
+    cursor: pointer
+    position: absolute
+    top: 550px
+    z-index: 200
+  .swiper-button-prev-unique
+    left: 30px
+  .swiper-button-next-unique
+    right: 30px
+    transform: rotate(180deg)
 
 .activation
   padding: 90px 0 0 0
@@ -234,8 +258,10 @@ p
       .container
         border-bottom: 4px solid $secondary1
       .question__toggle
-        img
-          transform: rotateX(0deg)
+        svg
+          transform: rotateX(180deg)
+          path
+            stroke: $secondary1
       .question__text
         background: $primary2
         display: inline-block
@@ -259,9 +285,9 @@ p
       display: flex
       justify-content: center
       align-items: center
-      img
+      svg
         width: 90px
-        transform: rotateX(180deg)
+        color: $primary1
     .faq__answer
         display: none
         
