@@ -106,33 +106,42 @@ p {
       width: 142px;
       background: #8ACAD3;
       border-radius: 100%;
-      z-index: 8; }
-    .main .phone-slider .phone-slider__swiper {
-      z-index: 100; }
-    .main .phone-slider .swiper {
+      z-index: 8;
       --swiper-navigation-color: $secondary1;
       --swiper-navigation-size: 60px; }
-    .main .phone-slider .swiper-slide {
-      text-align: center;
-      font-size: 18px;
-      /* Center slide text vertically */
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      display: flex;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      -webkit-justify-content: center;
-      justify-content: center;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      -webkit-align-items: center;
-      align-items: center; }
-      .main .phone-slider .swiper-slide img {
-        display: block;
-        width: 456px;
-        height: 100%;
-        object-fit: cover; }
+    .main .phone-slider .phone-slider__swiper {
+      z-index: 100; }
+      .main .phone-slider .phone-slider__swiper .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center; }
+        .main .phone-slider .phone-slider__swiper .swiper-slide img {
+          display: block;
+          width: 456px;
+          height: 100%;
+          object-fit: cover; }
+      .main .phone-slider .phone-slider__swiper .swiper-button-prev-unique, .main .phone-slider .phone-slider__swiper .swiper-button-next-unique {
+        cursor: pointer;
+        position: absolute;
+        top: 325px;
+        z-index: 200; }
+      .main .phone-slider .phone-slider__swiper .swiper-button-prev-unique {
+        left: -20px; }
+      .main .phone-slider .phone-slider__swiper .swiper-button-next-unique {
+        right: -20px;
+        transform: rotate(180deg); }
 
 .download {
   padding: 90px 0; }
@@ -148,18 +157,22 @@ p {
     .download .download__links a img {
       width: 200px; }
 
-.video .video__title {
-  color: #424241;
-  font-family: "Atrament Medium", "Arial", sans-serif;
-  font-weight: 500;
-  font-size: 80px; }
-
-.video .video__src {
-  width: 100%; }
+.video {
+  height: 100vh; }
+  .video .video__title {
+    color: #424241;
+    font-family: "Atrament Medium", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 80px; }
+  .video .video__src {
+    display: block;
+    width: 100%; }
 
 .functions {
   background: #E6E7E7;
-  padding: 90px 0; }
+  padding: 90px 0;
+  position: relative;
+  height: 100vh; }
   .functions .functions__title {
     color: #424241;
     font-family: "Atrament Medium", "Arial", sans-serif;
@@ -190,6 +203,16 @@ p {
         margin-bottom: 50px; }
       .functions .functions-slider__swiper .swiper-slide .item h3, .functions .functions-slider__swiper .swiper-slide .item p {
         text-align: center; }
+  .functions .swiper-button-prev-unique, .functions .swiper-button-next-unique {
+    cursor: pointer;
+    position: absolute;
+    top: 550px;
+    z-index: 200; }
+  .functions .swiper-button-prev-unique {
+    left: 30px; }
+  .functions .swiper-button-next-unique {
+    right: 30px;
+    transform: rotate(180deg); }
 
 .activation {
   padding: 90px 0 0 0; }
@@ -245,8 +268,10 @@ p {
       background: #E6E7E7; }
       .faq .faq-question__wrapper.active .container {
         border-bottom: 4px solid #424241; }
-      .faq .faq-question__wrapper.active .question__toggle img {
-        transform: rotateX(0deg); }
+      .faq .faq-question__wrapper.active .question__toggle svg {
+        transform: rotateX(180deg); }
+        .faq .faq-question__wrapper.active .question__toggle svg path {
+          stroke: #424241; }
       .faq .faq-question__wrapper.active .question__text {
         background: #88BAC2;
         display: inline-block;
@@ -270,9 +295,9 @@ p {
       display: flex;
       justify-content: center;
       align-items: center; }
-      .faq .faq-question__wrapper .question__toggle img {
+      .faq .faq-question__wrapper .question__toggle svg {
         width: 90px;
-        transform: rotateX(180deg); }
+        color: #009EB7; }
     .faq .faq-question__wrapper .faq__answer {
       display: none; }
 
