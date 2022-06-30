@@ -42,9 +42,9 @@ p
         color: $secondary1
 
 .main 
-  background: $primary1
+  background: $secondary4
   padding: 200px 0 90px 0
-  overflow-x: hidden
+  overflow-x: hidden //TODO: and this
   .main__title
     font-size: 75px
     color: $primary1
@@ -65,7 +65,7 @@ p
       width: 950px
       background: $primary1
       border-radius: 100%
-      z-index: 10
+      z-index: 100
     .main__circle2
       position: absolute
       overflow: hidden
@@ -92,7 +92,7 @@ p
       --swiper-navigation-size: 60px
 
     .phone-slider__wrapper
-      position: absolute
+      // position: absolute TODO: fix this
       .phone-slider__swiper
         z-index: 100
         .swiper-slide
@@ -147,6 +147,7 @@ p
 
 .video
   height: 100vh
+  line-height: 0
   .video__title
     color: $secondary1
     font-family: $atrMedium
