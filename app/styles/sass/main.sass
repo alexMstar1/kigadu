@@ -9,6 +9,18 @@
 body
   overflow-x: hidden
 
+p
+  font-family: $ms500
+  font-size: 24px
+  color: $secondary1
+
+.selected
+  background: $primary2
+  width: auto
+  display: inline-block
+  padding: 15px 20px 5px 20px
+  white-space: pre
+
 .header
   margin-top: 240px
   position: relative
@@ -34,6 +46,7 @@ body
 .main 
   background: $secondary4
   padding: 200px 0 90px 0
+  overflow-x: hidden
   .main__title
     font-size: 75px
     color: $primary1
@@ -41,7 +54,6 @@ body
     font-weight: 700
   .main__desc
     font-family: $ms500
-    // font-stretch: expanded
     font-size: 24px
     color: $secondary1
   .phone-slider
@@ -77,14 +89,11 @@ body
       border-radius: 100%
       z-index: 8
 
-    .phone-slider_wrapper
-      position: relative
-
     .phone-slider__swiper
-      z-index: 15
+      z-index: 100
       
     .swiper 
-      --swiper-navigation-color: black
+      --swiper-navigation-color: $secondary1
       --swiper-navigation-size: 60px
         
     .swiper-slide
@@ -113,5 +122,151 @@ body
 
 .download
   padding: 90px 0
+  .download__title
+    color: $secondary1
+    font-family: $atrMedium
+    font-weight: 500
+    font-size: 80px
+    margin-bottom: 35px
+  .download__links
+    a
+      text-decoration: none
+      margin-right: 20px
+      img
+        width: 200px
+
+.video
+  .video__title
+    color: $secondary1
+    font-family: $atrMedium
+    font-weight: 500
+    font-size: 80px
+  .video__src
+    width: 100%
+
+.functions
+  background: $secondary4
+  padding: 90px 0
+  .functions__title
+    color: $secondary1
+    font-family: $atrMedium
+    font-weight: 500
+    font-size: 80px
+    margin-bottom: 35px
+  .functions__desc
+    text-align: center
+    width: 85%
+    margin-bottom: 120px
+  .swiper
+    --swiper-navigation-color: $secondary1
+    --swiper-navigation-size: 60px
+  .functions-slider__swiper
+    width: 90%
+    .swiper-wrapper
+      // padding: 0 100px
+    .swiper-slide
+      .item
+        padding: 0 50px
+        .item__title
+          font-size: 50px
+          color: $primary1
+          font-family: $atrBold
+          font-weight: 700
+          margin-bottom: 20px
+        .item__desc
+          font-size: 22px
+        .item__thumb
+          height: 120px
+          margin-bottom: 50px
+        h3, p
+          text-align: center
+
+.activation
+  padding: 90px 0
+  .activation__title
+    color: $secondary1
+    font-family: $atrMedium
+    font-weight: 500
+    font-size: 80px
+  .activation__container
+    margin-top: 20px
+    padding: 75px 0 0 0 
+    background: $primary2
+    .steps
+      width: 90%
+      margin: 0 auto
+      .step__number
+        padding: 0 30px
+        font-size: 130px
+        line-height: 110px
+        font-family: $atrMedium
+        font-weight: bold
+        color: white
+    .activation__items
+      margin-top: 60px
+      padding-bottom: 90px
+      .col
+        padding: 0 40px
+      .icon-wrapper
+        margin-bottom: 30px
+      .item__title
+        text-align: center
+        color: $secondary1
+        font-family: $atrMedium
+        font-weight: 500
+        font-size: 70px
+        line-height: 80px
+        margin-bottom: 20px
+      .item__desc
+        text-align: center
+        font-size: 22px
+
+.faq
+  .faq__title
+    color: $secondary1
+    font-family: $atrMedium
+    font-weight: 500
+    font-size: 80px
+  .faq__questions
+    .question__toggle
+      img
+        width: 90px
+
+.footer
+  padding: 40px 0
+  background: $primary2
+  .footer__logo
+    margin-right: 40px
+    img
+      height: 200px
+  .tagline
+    .tagline__title
+      font-family: $ms900
+      color: white
+      line-height: 25px
+    .tagline__desc
+      font-family: $ms500
+      color: white
+      line-height: 30px
+  .ask
+    .ask__title
+      text-align: right
+      color: $secondary1
+      font-family: $ms900
+      line-height: 25px
+    .ask__desc
+      text-align: right
+      line-height: 30px
+  .footer__links
+    margin-bottom: 16px
+    a
+      text-decoration: none
+      color: $secondary1
+      font-family: $ms900
+      text-transform: uppercase
+      font-size: 25px
+      margin-left: 50px
+      
+  
 
 
