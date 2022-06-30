@@ -251,11 +251,14 @@ p {
         background: #88BAC2;
         display: inline-block;
         padding: 15px 20px 5px 20px; }
+      .faq .faq-question__wrapper.active .faq__question {
+        padding: 0 0 20px 0; }
       .faq .faq-question__wrapper.active .faq__answer {
         display: block; }
     .faq .faq-question__wrapper .container {
       border-bottom: 4px solid #E6E7E7; }
     .faq .faq-question__wrapper .faq__question {
+      cursor: pointer;
       padding: 20px 0; }
       .faq .faq-question__wrapper .faq__question .question__text {
         color: #424241;
@@ -265,8 +268,7 @@ p {
     .faq .faq-question__wrapper .question__toggle {
       display: flex;
       justify-content: center;
-      align-items: center;
-      cursor: pointer; }
+      align-items: center; }
       .faq .faq-question__wrapper .question__toggle img {
         width: 90px;
         transform: rotateX(180deg); }
