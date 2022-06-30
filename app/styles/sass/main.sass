@@ -16,10 +16,8 @@ p
 
 .selected
   background: $primary2
-  width: auto
   display: inline-block
   padding: 15px 20px 5px 20px
-  white-space: pre
 
 .header
   margin-top: 240px
@@ -182,7 +180,7 @@ p
           text-align: center
 
 .activation
-  padding: 90px 0
+  padding: 90px 0 0 0
   .activation__title
     color: $secondary1
     font-family: $atrMedium
@@ -222,15 +220,48 @@ p
         font-size: 22px
 
 .faq
+  padding: 90px 0
   .faq__title
     color: $secondary1
     font-family: $atrMedium
     font-weight: 500
     font-size: 80px
-  .faq__questions
+    margin-bottom: 60px
+  .faq-question__wrapper
+    margin: 30px 0
+    &.active
+      background: $secondary4
+      .container
+        border-bottom: 4px solid $secondary1
+      .question__toggle
+        img
+          transform: rotateX(0deg)
+      .question__text
+        background: $primary2
+        display: inline-block
+        padding: 15px 20px 5px 20px
+      .faq__answer
+        display: block
+    .container
+      border-bottom: 4px solid $secondary4
+    .faq__question
+      padding: 20px 0
+      .question__text
+        color: $secondary1
+        font-family: $atrMedium
+        font-weight: 500
+        font-size: 70px
     .question__toggle
+      display: flex
+      justify-content: center
+      align-items: center
+      cursor: pointer
       img
         width: 90px
+        transform: rotateX(180deg)
+    .faq__answer
+        display: none
+        
 
 .footer
   padding: 40px 0
