@@ -177,8 +177,7 @@ p {
 .functions {
   background: #E6E7E7;
   padding: 90px 0;
-  position: relative;
-  height: 100vh; }
+  position: relative; }
   .functions .functions__title {
     color: #424241;
     font-family: "Atrament Medium", "Arial", sans-serif;
