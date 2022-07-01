@@ -35,9 +35,6 @@
   -ms-user-select: none;
   user-select: none; }
 
-body {
-  overflow-x: hidden; }
-
 p {
   font-family: "MuseoSans 500", "Arial", sans-serif;
   font-size: 24px;
@@ -47,6 +44,9 @@ p {
   background: #88BAC2;
   display: inline-block;
   padding: 15px 20px 5px 20px; }
+
+.fullpage__main-wrapper {
+  overflow-x: hidden; }
 
 .header {
   margin-top: 240px;
@@ -72,8 +72,7 @@ p {
 
 .main {
   background: #E6E7E7;
-  padding: 200px 0 90px 0;
-  overflow-x: hidden; }
+  padding: 220px 0 90px 0; }
   .main .main__title {
     font-size: 75px;
     color: #009EB7;
@@ -84,72 +83,69 @@ p {
     font-size: 24px;
     color: #424241; }
   .main .phone-slider {
-    position: relative; }
-    .main .phone-slider .main__circle1 {
-      position: absolute;
-      overflow: hidden;
-      left: 100px;
-      top: -75px;
-      height: 950px;
-      width: 950px;
-      background: #009EB7;
-      border-radius: 100%;
-      z-index: 100; }
-    .main .phone-slider .main__circle2 {
-      position: absolute;
-      overflow: hidden;
-      left: 0px;
-      top: -100px;
-      height: 307px;
-      width: 307px;
-      background: #C6C6C6;
-      border-radius: 100%;
-      z-index: 9; }
-    .main .phone-slider .main__circle3 {
-      position: absolute;
-      overflow: hidden;
-      right: -250px;
-      top: -80px;
-      height: 142px;
-      width: 142px;
-      background: #8ACAD3;
-      border-radius: 100%;
-      z-index: 8;
-      --swiper-navigation-color: $secondary1;
-      --swiper-navigation-size: 60px; }
-    .main .phone-slider .phone-slider__wrapper .phone-slider__swiper {
-      z-index: 100; }
-      .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        /* Center slide text vertically */
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center; }
-        .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-slide img {
-          display: block;
-          width: 456px;
-          height: 100%;
-          object-fit: cover; }
-      .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-button-prev-unique, .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-button-next-unique {
-        cursor: pointer;
+    position: relative;
+    --swiper-navigation-color: $secondary1;
+    --swiper-navigation-size: 60px; }
+    .main .phone-slider .phone-slider__wrapper {
+      position: relative;
+      z-index: 20; }
+      .main .phone-slider .phone-slider__wrapper .phone-slider__swiper {
         position: absolute;
-        top: 325px;
+        top: -150px;
+        right: -120px;
+        width: 100%;
         z-index: 200; }
-      .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-button-prev-unique {
-        left: -20px; }
-      .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-button-next-unique {
-        right: -20px;
-        transform: rotate(180deg); }
+        .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-slide {
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+          .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-slide img {
+            display: block;
+            width: 425px;
+            height: 100%;
+            object-fit: cover; }
+        .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-button-prev-unique, .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-button-next-unique {
+          cursor: pointer;
+          position: absolute;
+          top: 325px;
+          z-index: 200; }
+          .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-button-prev-unique img, .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-button-next-unique img {
+            height: 140px; }
+        .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-button-prev-unique {
+          left: 10px; }
+        .main .phone-slider .phone-slider__wrapper .phone-slider__swiper .swiper-button-next-unique {
+          right: 10px;
+          transform: rotate(180deg); }
+  .main .main__circle1 {
+    position: absolute;
+    overflow: hidden;
+    left: 50px;
+    top: -75px;
+    height: 950px;
+    width: 950px;
+    background: #009EB7;
+    border-radius: 100%;
+    z-index: 10; }
+  .main .main__circle2 {
+    position: absolute;
+    overflow: hidden;
+    left: 0px;
+    top: -100px;
+    height: 307px;
+    width: 307px;
+    background: #C6C6C6;
+    border-radius: 100%;
+    z-index: 9; }
+  .main .main__circle3 {
+    position: absolute;
+    overflow: hidden;
+    right: -250px;
+    top: -80px;
+    height: 142px;
+    width: 142px;
+    background: #8ACAD3;
+    border-radius: 100%;
+    z-index: 8; }
 
 .download {
   padding: 90px 0; }
