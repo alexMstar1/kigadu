@@ -27,6 +27,14 @@
   padding: 0;
   border: 0; }
 
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 body {
   overflow-x: hidden; }
 
@@ -158,15 +166,16 @@ p {
       width: 200px; }
 
 .video {
-  height: 100vh;
-  line-height: 0; }
+  line-height: 0;
+  display: block;
+  padding: 90px 0; }
   .video .video__title {
     color: #424241;
     font-family: "Atrament Medium", "Arial", sans-serif;
     font-weight: 500;
     font-size: 80px; }
   .video .video__src {
-    display: block;
+    display: block !important;
     width: 100%; }
 
 .functions {

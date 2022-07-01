@@ -6,6 +6,14 @@
   padding: 0 
   border: 0
 
+.noselect 
+  -webkit-touch-callout: none // iOS Safari
+  -webkit-user-select: none // Safari
+  -khtml-user-select: none // Konqueror HTML
+  -moz-user-select: none // Old versions of Firefox
+  -ms-user-select: none // Internet Explorer/Edge
+  user-select: none // Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox
+
 body
   overflow-x: hidden
 
@@ -146,15 +154,16 @@ p
         width: 200px
 
 .video
-  height: 100vh
   line-height: 0
+  display: block
+  padding: 90px 0
   .video__title
     color: $secondary1
     font-family: $atrMedium
     font-weight: 500
     font-size: 80px
   .video__src
-    display: block
+    display: block !important
     width: 100%
 
 .functions

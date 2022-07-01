@@ -22,8 +22,8 @@
 
     <div id="fullpage">
 
-        <div class="section">
-            <header id="header" class="header">
+        <div class="section" data-anchor="main" id="testsection">
+            <header class="header">
                 <div class="container">
                     <div class="row">
                         <nav class="d-flex justify-content-between">
@@ -33,7 +33,7 @@
                                 </div>
                             </div>
                             <ul class="col col-md-7 header__menu header-menu d-flex justify-content-between align-items-end">
-                                <li class="header-menu__item"><a href="#download">download</a></li>
+                                <li class="header-menu__item" id="toDownload"><a href="#downlaod">download</a></li>
                                 <li class="header-menu__item"><a href="#functions">funktionen</a></li>
                                 <li class="header-menu__item"><a href="#activation">aktivierung</a></li>
                                 <li class="header-menu__item"><a href="#faq">faq</a></li>
@@ -43,7 +43,7 @@
                 </div>
             </header>
         
-            <main id="main" class="main">
+            <main class="main">
                 <div class="container">
                     <div class="row d-flex justify-content-between">
                         <div class="col col-md-5">
@@ -84,7 +84,7 @@
                 </div>
             </main>
 
-            <section id="download" class="download">
+            <section class="download">
                 <div class="container">
                     <div class="row">
                         <div class="col col-md-6">
@@ -106,8 +106,8 @@
             </section>
         </div>
         
-        <div class="section">
-            <section id="video" class="video">
+        <div class="section" data-anchor="video">
+            <section class="video">
                 <div class="container">
                     <div class="row">
                         <div class="col col-md-12">
@@ -125,8 +125,8 @@
             </section>
         </div>
         
-        <div class="section">
-            <section id="functions" class="functions">
+        <div class="section" data-anchor="functions">
+            <section class="functions">
                 <div class="container">
                     <div class="row">
                         <div class="col col-md-12 d-flex align-items-center flex-column">
@@ -209,8 +209,8 @@
             </section>
         </div>
 
-        <div class="section">
-            <section id="activation" class="activation">
+        <div class="section" data-anchor="activation">
+            <section class="activation">
                 <div class="container">
                     <div class="row">
                         <div class="col col-md-12 d-flex justify-content-center">
@@ -277,8 +277,8 @@
             </section>
         </div>
 
-        <div class="section">
-            <section id="faq" class="faq">
+        <div class="section" data-anchor="faq">
+            <section class="faq">
                 <div class="container">
                     <div class="row">
                         <div class="col col-md-12 d-flex justify-content-center">
@@ -288,7 +288,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="faq-question__wrapper accordion">
+                <div class="faq-question__wrapper accordion noselect">
                     <div class="container">
                         <div class="row">
                             <div class="col col-md-12">
@@ -311,7 +311,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="faq-question__wrapper accordion">
+                <div class="faq-question__wrapper accordion noselect">
                     <div class="container">
                         <div class="row">
                             <div class="col col-md-12">
@@ -335,7 +335,7 @@
                     </div>
                 </div>
                         
-                <div class="faq-question__wrapper accordion">
+                <div class="faq-question__wrapper accordion noselect">
                     <div class="container">
                         <div class="row">
                             <div class="col col-md-12">
@@ -359,7 +359,7 @@
                     </div>
                 </div>
         
-                <div class="faq-question__wrapper accordion">
+                <div class="faq-question__wrapper accordion noselect">
                     <div class="container">
                         <div class="row">
                             <div class="col col-md-12">
@@ -385,7 +385,7 @@
                     
             </section>
         
-            <footer id="footer" class="footer">
+            <footer class="footer">
                 <div class="container">
                     <div class="row justify-content-between">
                         <div class="col col-md-8 d-flex align-items-end">
@@ -423,8 +423,6 @@
 
     </div>
 
-    <script src="./scripts/core.js"></script>
-
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
@@ -451,11 +449,13 @@
     <!-- Initialize fullpage.js -->
     <script>
         new fullpage('#fullpage', {
-            //options here
+            anchors:['main', 'video', 'functions', 'activation', 'faq'],
             autoScrolling:true,
             scrollHorizontally: true
         });
     </script>
+
+    <script src="./scripts/core.js"></script>
 
 </body>
 </html>
