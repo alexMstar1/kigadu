@@ -46,7 +46,7 @@
             <main class="main">
                 <div class="container">
                     <div class="row d-flex justify-content-between">
-                        <div class="col col-md-5">
+                        <div class="col col-md-6 main__wrapper-info">
                             <h1 class="main__title">
                                 Die Kigadu Eltern-App
                             </h1>
@@ -71,10 +71,18 @@
                                             </div>
                                         </div>
                                         <div class="swiper-button-next-unique">
-                                            <img src="./assets/img/phone-slider-arrow.svg" alt="">
+                                            <svg id="SVGDoc" width="94" height="176" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 94 176">
+                                                <g><g>
+                                                    <path d="M68.9253,150.2583v0l-43,-66.699v0l43,-58.5v0" fill-opacity="0" fill="#ffffff" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="1" stroke="#f2f2f2" stroke-miterlimit="20" stroke-width="5"></path>
+                                                </g></g>
+                                            </svg>
                                         </div>
                                         <div class="swiper-button-prev-unique">
-                                            <img src="./assets/img/phone-slider-arrow.svg" alt="">
+                                            <svg id="SVGDoc" width="94" height="176" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:avocode="https://avocode.com/" viewBox="0 0 94 176">
+                                                <g><g>
+                                                    <path d="M68.9253,150.2583v0l-43,-66.699v0l43,-58.5v0" fill-opacity="0" fill="#ffffff" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="1" stroke="#f2f2f2" stroke-miterlimit="20" stroke-width="5"></path>
+                                                </g></g>
+                                            </svg>
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +97,8 @@
                     <div class="row">
                         <div class="col col-md-6">
                             <h2 class="download__title">
-                                <span class="selected">Jetzt App downloaden</span> <br> & mit Ihrem Kindergarten kommunizieren!
+                                <span class="selected download__selected">Jetzt App downloaden</span> 
+                                <span>& mit Ihrem Kindergarten kommunizieren!</span>
                             </h2>
                             <div class="download__links">
                                 <a href="#">
@@ -225,7 +234,7 @@
                     <div class="container">
                         <div class="row">
                             <div class="col col-md-12">
-                                <div class="activation__steps steps d-flex justify-content-center align-items-center">
+                                <div class="activation__steps steps justify-content-center align-items-center">
                                     <div class="step__number">
                                         1
                                     </div>
@@ -248,6 +257,11 @@
                         <div class="activation__items items">
                             <div class="row">
                                 <div class="col col-md-4">
+                                    <div class="item__step-number justify-content-center align-items-center">
+                                        <div class="step__arrow"><img src="./assets/img/arrow.svg" alt=""></div>
+                                        <div class="step__number">1</div>
+                                        <div class="step__arrow"><img src="./assets/img/arrow.svg" alt=""></div>
+                                    </div>
                                     <div class="icon-wrapper d-flex justify-content-center">
                                         <img src="./assets/img/activation-steps/house.png" alt="" class="activation_thumb">
                                     </div>
@@ -255,6 +269,11 @@
                                     <p class="item__desc">Error atque harum quisquam? Modi perspiciatis aliquid eum saepe eveniet! Odit ad laboriosam ut ex ea.</p>
                                 </div>
                                 <div class="col col-md-4">
+                                    <div class="item__step-number justify-content-center align-items-center">
+                                        <div class="step__arrow"><img src="./assets/img/arrow.svg" alt="" class="img-reverse"></div>
+                                        <div class="step__number">2</div>
+                                        <div class="step__arrow"><img src="./assets/img/arrow.svg" alt="" class="img-reverse "></div>
+                                    </div>
                                     <div class="icon-wrapper d-flex justify-content-center">
                                         <img src="./assets/img/activation-steps/check.png" alt="" class="activation_thumb">
                                     </div>
@@ -262,6 +281,11 @@
                                     <p class="item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error atque harum quisquam? </p>
                                 </div>
                                 <div class="col col-md-4">
+                                    <div class="item__step-number justify-content-center align-items-center">
+                                        <div class="step__arrow"><img src="./assets/img/arrow.svg" alt=""></div>
+                                        <div class="step__number">3</div>
+                                        <div class="step__arrow"><img src="./assets/img/arrow.svg" alt=""></div>
+                                    </div>
                                     <div class="icon-wrapper d-flex justify-content-center">
                                         <img src="./assets/img/activation-steps/phone.png" alt="" class="activation_thumb">
                                     </div>
@@ -388,7 +412,7 @@
             <footer class="footer">
                 <div class="container">
                     <div class="row justify-content-between">
-                        <div class="col col-md-8 d-flex align-items-end">
+                        <div class="col col-md-8 d-flex align-items-end footer__logo-wrapper">
                             <div class="footer__logo">
                                 <img src="./assets/img/logo-footer.svg" alt="">
                             </div>
@@ -401,7 +425,7 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="col col-md-4 d-flex flex-column justify-content-between">
+                        <div class="col col-md-4 d-flex flex-column justify-content-between footer__links-wrapper">
                             <div class="footer__ask ask">
                                 <h4 class="ask__title">
                                     Noch Fragen?
@@ -410,7 +434,7 @@
                                     Wenden Sie sich einfach an Ihre Kinderbetreuungseinrichtung!
                                 </p>
                             </div>
-                            <div class="footer__links d-flex justify-content-end">
+                            <div class="footer__links d-flex">
                                 <a href="#">impressum</a>
                                 <a href="#">datenschutz</a>
                             </div>
@@ -443,16 +467,23 @@
             nextEl: ".swiper-button-next-unique",
             prevEl: ".swiper-button-prev-unique",
         },
+        breakpoints: {
+            1400: {slidesPerView: 4},
+            1200: {slidesPerView: 3},
+            768: {slidesPerView: 2},
+            0: {slidesPerView: 1}
+        }
       });
     </script>
 
     <!-- Initialize fullpage.js -->
     <script>
-        new fullpage('#fullpage', {
-            anchors:['main', 'video', 'functions', 'activation', 'faq'],
-            autoScrolling:true,
-            scrollHorizontally: true
-        });
+        // new fullpage('#fullpage', {
+        //     anchors:['main', 'video', 'functions', 'activation', 'faq'],
+        //     autoScrolling:true,
+        //     scrollHorizontally: true,
+        //     responsiveWidth: 800
+        // });
     </script>
 
     <script src="./scripts/core.js"></script>
