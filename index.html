@@ -13,16 +13,44 @@
     <link rel="stylesheet" type="text/css" href="./styles/css/fullpage.min.css" />
     <link rel="stylesheet" href="./styles/css/main.css">
 
-    <!-- scripts -->
-    <script type="text/javascript" src="./scripts/fullpage.min.js"></script>
-
     <title>Kigadu</title>
 </head>
 <body>
 
+    <section class="header-mobile">
+        <div class="container">
+                <nav class="d-flex justify-content-between">
+                    <div class="header__logo">
+                        <img src="assets/img/logo.svg" alt="">
+                    </div>
+                    <div class="">
+                        <div class="header__bm-wrapper">
+                            <div class="burger-menu">
+                                <div class="burger-click-region">
+                                <span class="burger-menu-piece top"></span>
+                                <span class="burger-menu-piece middle"></span>
+                                <span class="burger-menu-piece bottom"></span>
+                                </div>
+                            </div>
+                            
+                            <div class="sidebar">
+                                <div class="sidemenu">
+                                <li class="sidetext"><a href="#download">download</a></li>
+                                <li class="sidetext"><a href="#functions">funktionen</a></li>
+                                <li class="sidetext"><a href="#activation">aktivierung</a></li>
+                                <li class="sidetext"><a href="#faq">faq</a></li>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+        </div>
+    </section>
+
     <div id="fullpage">
 
         <div class="section fullpage__main-wrapper" data-anchor="main">
+
             <header class="header">
                 <div class="container">
                     <div class="row">
@@ -32,7 +60,7 @@
                                     <img src="assets/img/logo.svg" alt="">
                                 </div>
                             </div>
-                            <ul class="col col-md-7 header__menu header-menu d-flex justify-content-between align-items-end">
+                            <ul class="col col-md-7 header__menu header-menu justify-content-between align-items-end">
                                 <li class="header-menu__item" id="toDownload"><a href="#downlaod">download</a></li>
                                 <li class="header-menu__item"><a href="#functions">funktionen</a></li>
                                 <li class="header-menu__item"><a href="#activation">aktivierung</a></li>
@@ -54,7 +82,7 @@
                                 Per App mit Ihrer Kinderbetreuungs-Einrichtung kommunizieren. Wichtige Push-Up-Mitteilungen direkt auf Ihr Smartphone. Kind krank melden und wichtige Stammdaten und Notfallkontakte verwalten.
                             </p>
                         </div>
-                        <div class="col col-md-6">
+                        <div class="col col-md-6 main__wrapper-phone-slider">
                             <div class="main__phone-slider phone-slider">
                                 <div class="main__circle1"></div>
                                 <div class="main__circle2"></div>
@@ -447,8 +475,32 @@
 
     </div>
 
+    <script>
+        // Fullpage.js destroy on mobile
+
+        fullpagejs = document.querySelector('#fullpage')
+        console.log(fullpagejs);
+        let initialMoblieValue
+
+        if (document.documentElement.clientWidth > 768) {
+            console.log('more');
+            fullpagejs.setAttribute('id', 'fullpage')
+        } else {
+            console.log('less');
+            fullpagejs.setAttribute('id', 'fullpage-destroyed')
+            document.querySelector('.download').setAttribute('id', 'download')
+            document.querySelector('.functions').setAttribute('id', 'functions')
+            document.querySelector('.activation').setAttribute('id', 'activation')
+            document.querySelector('.faq').setAttribute('id', 'faq')
+        }
+        
+        // window.addEventListener("resize", fullpagejsDestroyTracker)
+    </script>
+
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
@@ -476,14 +528,21 @@
       });
     </script>
 
+    <script>
+        
+    </script>
+
+    <!-- scripts -->
+    <script type="text/javascript" src="./scripts/fullpage.min.js"></script>
+
     <!-- Initialize fullpage.js -->
     <script>
-        // new fullpage('#fullpage', {
-        //     anchors:['main', 'video', 'functions', 'activation', 'faq'],
-        //     autoScrolling:true,
-        //     scrollHorizontally: true,
-        //     responsiveWidth: 800
-        // });
+        new fullpage('#fullpage', {
+            anchors:['main', 'video', 'functions', 'activation', 'faq'],
+            autoScrolling:true,
+            scrollHorizontally: true,
+            // responsiveWidth: 768
+        });
     </script>
 
     <script src="./scripts/core.js"></script>

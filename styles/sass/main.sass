@@ -33,13 +33,24 @@ p
 .fullpage__main-wrapper
   overflow-x: hidden
 
-.header
-  margin-top: 240px
+.header, .header-mobile
   position: relative
-  @media screen and (max-width: $xlarge)
-    margin-top: 140px
-  @media screen and (max-width: $large)
-    margin-top: 110px
+  z-index: 1000
+  background: white
+  @media screen and (max-width: $medium)
+    // position: sticky
+    // top: 0
+    display: none
+    .container
+      width: 100%
+  nav
+    margin-top: 240px
+    @media screen and (max-width: $xlarge)
+      margin-top: 140px
+    @media screen and (max-width: $large)
+      margin-top: 110px
+    @media screen and (max-width: $medium)
+      margin-top: 60px 
   .header__logo
     position: relative
     img
@@ -47,19 +58,29 @@ p
       bottom: -146px
       height: 300px
       width: 300px
+      z-index: 1000
       @media screen and (max-width: $xlarge)
         width: 200px 
-        bottom: -159px
+        height: 200px
+        bottom: -109px
       @media screen and (max-width: $large)
         width: 150px
-        bottom: -164px
+        width: 150px
+        bottom: -114px
+      @media screen and (max-width: $medium)
+        width: 100px
+        height: 100px
+        bottom: -28px
         
   .header-menu
     list-style-type: none
     padding: 0
     margin: 0 0 20px 0
+    display: flex
     @media screen and (max-width: $xxlarge)
       width: 65%
+    @media screen and (max-width: $medium)
+      display: none
     .header-menu__item
       font-family: $ms900
       text-transform: uppercase
@@ -72,6 +93,73 @@ p
         @media screen and (max-width: $large)
           font-size: 18px
 
+.header-mobile
+  display: none
+  position: fixed
+  z-index: 1000
+  width: 100%
+  @media screen and (max-width: $medium)
+    display: block
+  .header__bm-wrapper
+    display: none
+    width: 100%
+    margin: 0 auto
+    // overflow: hidden
+    position: relative
+    @media screen and (max-width: $medium)
+      display: block
+    .burger-menu 
+      width: 140px
+      height: 30px
+      color: $secondary1
+      text-transform: uppercase
+      z-index: 50
+    .burger-click-region 
+      position: absolute
+      bottom: 35px
+      right: -20px
+      width: 40px
+      height: 30px
+      cursor: pointer
+      @media screen and (max-width: 620px)
+        right: 0
+    .burger-menu-piece 
+      display: block
+      position: relative
+      width: 40px
+      border-top: 1px solid #000
+      transform-origin: 50% 50%
+      margin-top: 10px
+    .sidebar 
+      background: $secondary5
+      width: 300px
+      right: -300px
+      height: 100%
+      position: fixed
+      z-index: 900
+    li 
+      list-style-type: none
+      margin-bottom: 20px
+      a
+        text-transform: uppercase
+        text-decoration: none
+        font-family: $ms900
+        font-size: 3.7vw
+        font-size: 22px
+        color: $secondary1
+        text-align:left
+        font-weight: bold
+        cursor: pointer
+        transition: all 1s ease
+        -webkit-transition: all 1s ease
+        -moz-transition: all 1s ease
+        min-width: 100%
+    .sidemenu 
+      margin: 60px 0 0 60px
+    .sidetext 
+      opacity: 1
+      color: $primary1
+
 .main 
   background: $secondary4
   padding: 220px 0 90px 0
@@ -81,10 +169,21 @@ p
     padding: 180px 0 90px 0
     .col-md-6
       width: 54%
+  @media screen and (max-width: $medium)
+    margin-top: 90px
+    padding: 90px 0
 
   .main__wrapper-info
     @media screen and (max-width: $large)
       width: 46%
+    @media screen and (max-width: $medium)
+      flex: 0 0 100%
+      z-index: 100
+      margin-bottom: 50px
+  .main__wrapper-phone-slider
+    @media screen and (max-width: $medium)
+      height: 500px
+      flex: 0 0 100%
   
   .main__title
     font-size: 75px
@@ -115,6 +214,8 @@ p
     .phone-slider__wrapper
       position: relative
       z-index: 20
+      // @media screen and (max-width: $medium)
+      //   display: none
       .phone-slider__swiper
         position: absolute
         top: -150px
@@ -127,6 +228,9 @@ p
           right: -25px
         @media screen and (max-width: $large)
           right: -35px
+        @media screen and (max-width: $medium)
+          top: 0
+          right: 0
         .swiper-slide
           display: flex
           justify-content: center
@@ -142,6 +246,8 @@ p
               width: 290px
             @media screen and (max-width: $large)
               width: 250px
+            @media screen and (max-width: $micro)
+              width: 200px
         .swiper-button-prev-unique, .swiper-button-next-unique
           cursor: pointer
           position: absolute
@@ -161,6 +267,12 @@ p
             top: 175px
             svg
               height: 120px
+          @media screen and (max-width: $medium)
+            svg  
+              path
+                stroke: $secondary1
+          @media screen and (max-width: $micro)
+            top: 120px
         .swiper-button-prev-unique
           left: 10px
           @media screen and (max-width: 1540px)
@@ -171,6 +283,10 @@ p
             left: -15px
           @media screen and (max-width: $large)
             left: -25px
+          @media screen and (max-width: $medium)
+            left: 25px
+          @media screen and (max-width: $micro)
+            left: -10px
         .swiper-button-next-unique
           right: 10px
           transform: rotate(180deg)
@@ -182,6 +298,10 @@ p
             right: -15px
           @media screen and (max-width: $large)
             right: -25px
+          @media screen and (max-width: $medium)
+            right: 25px
+          @media screen and (max-width: $micro)
+            right: -10px
   .main__circle1
     position: absolute
     overflow: hidden
@@ -200,6 +320,9 @@ p
     @media screen and (max-width: $large)
       display: block
       top: -60px
+    @media screen and (max-width: $medium)
+      left: 200px
+      top: 300px
   .main__circle2
     position: absolute
     overflow: hidden
@@ -210,6 +333,9 @@ p
     background: $secondary2
     border-radius: 100%
     z-index: 9
+    @media screen and (max-width: $medium)
+      top: 120px
+      left: -50px
   .main__circle3
     position: absolute
     overflow: hidden
@@ -223,6 +349,9 @@ p
     @media screen and (max-width: $xlarge)
       left: 350px
       top: -110px
+    @media screen and (max-width: $medium)
+      top: 20px
+      left: 400px
 
 .download
   padding: 90px 0
@@ -235,6 +364,8 @@ p
     font-weight: 500
     font-size: 80px
     margin-bottom: 35px
+    @media screen and (max-width: $micro)
+      font-size: 55px
     span
       display: table
       @media screen and (max-width: $xlarge)
@@ -245,6 +376,12 @@ p
       margin-right: 20px
       img
         width: 200px
+    @media screen and (max-width: 485px)
+      display: flex
+      a
+        width: 100%
+        img
+          width: 100%
 
 .video
   line-height: 0
@@ -280,6 +417,8 @@ p
     @media screen and (max-width: $large)
       font-size: 22px
       width: 100%
+    @media screen and (max-width: $micro)
+      font-size: 18px
   .swiper
     --swiper-navigation-color: $secondary1
     --swiper-navigation-size: 60px
@@ -296,6 +435,8 @@ p
           font-family: $atrBold
           font-weight: 700
           margin-bottom: 20px
+          @media screen and (max-width: $micro)
+            font-size: 40px
         .item__desc
           font-size: 22px
         .item__thumb
@@ -308,15 +449,23 @@ p
     position: absolute
     top: 550px
     z-index: 200
+    @media screen and (max-width: $micro)
+      top: 575px
+    img
+      @media screen and (max-width: $micro)
+        height: 100px
   .swiper-button-prev-unique
     left: 30px
+    @media screen and (max-width: 540px)
+      left: 10px
   .swiper-button-next-unique
     right: 30px
     transform: rotate(180deg)
+    @media screen and (max-width: 540px)
+      right: 10px
 
 .activation
   padding: 90px 0 0 0
-  overflow: hidden
   .activation__title
     color: $secondary1
     font-family: $atrMedium
@@ -328,6 +477,7 @@ p
     margin-top: 20px
     padding: 75px 0 0 0 
     background: $primary2
+    overflow-x: hidden
     .steps
       width: 90%
       margin: 0 auto
@@ -347,6 +497,8 @@ p
         img
           @media screen and (max-width: $xlarge)
             width: 350px
+        // @media screen and (max-width: 450px)
+        //   display: none
 
     .activation__items
       margin-top: 60px
@@ -367,9 +519,13 @@ p
         font-size: 70px
         line-height: 80px
         margin-bottom: 20px
+        @media screen and (max-width: $small)
+          font-size: 55px
       .item__desc
         text-align: center
         font-size: 22px
+        @media screen and (max-width: $small)
+          font-size: 20px
 
     .item__step-number
       margin-bottom: 40px
@@ -386,6 +542,8 @@ p
         font-family: $atrMedium
         font-weight: bold
         color: white
+        @media screen and (max-width: $small)
+          font-size: 110px
 
 .faq
   padding: 90px 0
@@ -408,6 +566,8 @@ p
           transform: rotateX(180deg)
           path
             stroke: $secondary1
+        @media screen and (max-width: $small)
+          width: 50px
       .question__text
         background: $primary2
         display: inline-block
@@ -429,6 +589,8 @@ p
         padding: 20px
         @media screen and (max-width: $large)
           font-size: 60px
+        @media screen and (max-width: $small)
+          font-size: 40px
     .question__toggle
       display: flex
       justify-content: center
@@ -436,22 +598,39 @@ p
       svg
         width: 90px
         color: $primary1
+      @media screen and (max-width: $small)
+        width: 50px
     .faq__answer
       display: none
       @media screen and (max-width: $large)
-          font-size: 20px
+        font-size: 20px
         
 
 .footer
   padding: 40px 0
   background: $primary2
+  overflow-x: hidden
+  @media screen and (max-width: $small)
+    padding: 40px 20px
   .col
     @media screen and (max-width: $xlarge)
       width: 100%
+  .footer__logo-wrapper
+    @media screen and (max-width: $small)
+      flex-wrap: wrap
+      justify-content: start
   .footer__logo
     margin-right: 40px
+    @media screen and (max-width: $small)
+      margin-bottom: 20px
     img
       height: 200px
+    @media screen and (max-width: $medium)
+      img
+        height: 130px
+    @media screen and (max-width: $small)
+      img
+        height: 100px
   .tagline
     .tagline__title
       font-family: $ms900
@@ -461,6 +640,11 @@ p
       font-family: $ms500
       color: white
       line-height: 30px
+    @media screen and (max-width: $small)
+      text-align: left
+      .tagline__desc
+        font-size: 20px
+    
   .ask
     .ask__title
       text-align: right
@@ -475,6 +659,9 @@ p
         text-align: left
       .ask__desc
         text-align: left
+    @media screen and (max-width: $small)
+      .ask__desc
+        font-size: 20px
   .footer__links
     margin-bottom: 16px
     justify-content: end
@@ -488,6 +675,16 @@ p
         margin-left: 50px
     @media screen and (max-width: $xlarge)
       justify-content: start
+    @media screen and (max-width: $medium)
+      a
+        font-size: 22px
+        &:not(:first-child)
+          margin-left: 30px
+    @media screen and (max-width: $small)
+      a
+        font-size: 20px
+        &:not(:first-child)
+          margin-left: 28px
 
   .footer__logo-wrapper
     @media screen and (max-width: $xlarge)
