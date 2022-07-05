@@ -34,9 +34,11 @@ p
   overflow-x: hidden
 
 .header, .header-mobile
-  position: relative
+  position: fixed
+  width: 100%
   z-index: 1000
   background: white
+  transition: $baseTr
   @media screen and (max-width: $medium)
     // position: sticky
     // top: 0
@@ -44,6 +46,7 @@ p
     .container
       width: 100%
   nav
+    transition: $baseTr
     margin-top: 240px
     @media screen and (max-width: $xlarge)
       margin-top: 140px
@@ -51,6 +54,8 @@ p
       margin-top: 110px
     @media screen and (max-width: $medium)
       margin-top: 60px 
+    ul
+      transition: $baseTr
   .header__logo
     position: relative
     img
@@ -59,6 +64,7 @@ p
       height: 300px
       width: 300px
       z-index: 1000
+      transition: $baseTr
       @media screen and (max-width: $xlarge)
         width: 200px 
         height: 200px
@@ -92,6 +98,21 @@ p
           font-size: 22px
         @media screen and (max-width: $large)
           font-size: 18px
+        transition: $baseTr
+  &.compressed
+    background: rgba(250, 250, 250, 0.85)
+    nav
+      margin: 20px 0
+      ul
+        margin: 0
+    .header__logo
+      img
+        height: 80px
+        width: 80px
+        top: -11px
+    .header-menu__item
+      a
+        font-size: 18px
 
 .header-mobile
   display: none
@@ -162,9 +183,18 @@ p
 
 .main 
   background: $secondary4
-  padding: 220px 0 90px 0
-  
+  padding: 552px 0 90px 0
+  transition: $baseTr
+  &.compressed
+    padding: 350px 0 90px 0
+    @media screen and (max-width: $xlarge)
+      margin-top: 0
+
+  @media screen and (max-width: $xlarge)
+    margin-top: 193px
+    padding: 220px 0 90px 0
   @media screen and (max-width: $large)
+    margin-top: 157px
     overflow: hidden
     padding: 180px 0 90px 0
     .col-md-6
@@ -557,6 +587,7 @@ p
       font-size: 60px
   .faq-question__wrapper
     margin: 30px 0
+    transition: $baseTr
     &.active
       background: $secondary4
       .container
@@ -575,18 +606,21 @@ p
       .faq__question
         padding: 0 0 20px 0
       .faq__answer
-        display: block
+        max-height: 500px
     .container
       border-bottom: 4px solid $secondary4
+      transition: $baseTr
     .faq__question
       cursor: pointer
       padding: 0 0 20px 0
+      transition: $baseTr
       .question__text
         color: $secondary1
         font-family: $atrMedium
         font-weight: 500
         font-size: 70px
         padding: 20px
+        transition: $baseTr
         @media screen and (max-width: $large)
           font-size: 60px
         @media screen and (max-width: $small)
@@ -598,10 +632,13 @@ p
       svg
         width: 90px
         color: $primary1
+        transition: $baseTr
       @media screen and (max-width: $small)
         width: 50px
     .faq__answer
-      display: none
+      max-height: 0
+      overflow: hidden
+      transition: $baseTr
       @media screen and (max-width: $large)
         font-size: 20px
         

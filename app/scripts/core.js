@@ -51,6 +51,4 @@ tl
 
 document.querySelector('.burger-click-region').addEventListener('click', () => {
   tl.reversed() ? tl.play() : tl.reverse()
-})
-
-
+})  
