@@ -17,6 +17,26 @@
 </head>
 <body>
 
+    <header class="header ">
+        <div class="container">
+            <div class="row">
+                <nav class="d-flex justify-content-between">
+                    <div class="col col-md-3">
+                        <div class="header__logo">
+                            <img src="assets/img/logo.svg" alt="">
+                        </div>
+                    </div>
+                    <ul class="col col-md-7 header__menu header-menu justify-content-between align-items-end">
+                        <li class="header-menu__item" id="toDownload"><a href="#downlaod">download</a></li>
+                        <li class="header-menu__item"><a href="#functions">funktionen</a></li>
+                        <li class="header-menu__item"><a href="#activation">aktivierung</a></li>
+                        <li class="header-menu__item"><a href="#faq">faq</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
     <section class="header-mobile">
         <div class="container">
                 <nav class="d-flex justify-content-between">
@@ -50,26 +70,6 @@
     <div id="fullpage">
 
         <div class="section fullpage__main-wrapper" data-anchor="main">
-
-            <header class="header">
-                <div class="container">
-                    <div class="row">
-                        <nav class="d-flex justify-content-between">
-                            <div class="col col-md-3">
-                                <div class="header__logo">
-                                    <img src="assets/img/logo.svg" alt="">
-                                </div>
-                            </div>
-                            <ul class="col col-md-7 header__menu header-menu justify-content-between align-items-end">
-                                <li class="header-menu__item" id="toDownload"><a href="#downlaod">download</a></li>
-                                <li class="header-menu__item"><a href="#functions">funktionen</a></li>
-                                <li class="header-menu__item"><a href="#activation">aktivierung</a></li>
-                                <li class="header-menu__item"><a href="#faq">faq</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </header>
         
             <main class="main">
                 <div class="container">
@@ -442,7 +442,9 @@
                     <div class="row justify-content-between">
                         <div class="col col-md-8 d-flex align-items-end footer__logo-wrapper">
                             <div class="footer__logo">
-                                <img src="./assets/img/logo-footer.svg" alt="">
+                                <a href="#">
+                                    <img src="./assets/img/logo-footer.svg" alt="">
+                                </a>
                             </div>
                             <div class="footer__tagline tagline">
                                 <h4 class="tagline__title">
@@ -479,22 +481,17 @@
         // Fullpage.js destroy on mobile
 
         fullpagejs = document.querySelector('#fullpage')
-        console.log(fullpagejs);
         let initialMoblieValue
 
         if (document.documentElement.clientWidth > 768) {
-            console.log('more');
             fullpagejs.setAttribute('id', 'fullpage')
         } else {
-            console.log('less');
             fullpagejs.setAttribute('id', 'fullpage-destroyed')
             document.querySelector('.download').setAttribute('id', 'download')
             document.querySelector('.functions').setAttribute('id', 'functions')
             document.querySelector('.activation').setAttribute('id', 'activation')
             document.querySelector('.faq').setAttribute('id', 'faq')
         }
-        
-        // window.addEventListener("resize", fullpagejsDestroyTracker)
     </script>
 
     <!-- Swiper JS -->
@@ -505,6 +502,9 @@
     <!-- Initialize Swiper -->
     <script>
       var phoneSlider = new Swiper(".phone-slider__swiper", {
+        autoplay: {
+            delay: 5000,
+        },
         rewind: true,
         navigation: {
             nextEl: ".swiper-button-next-unique",
@@ -537,11 +537,28 @@
 
     <!-- Initialize fullpage.js -->
     <script>
+        let header = document.querySelector(".header")
+        let main = document.querySelector(".main")
+
         new fullpage('#fullpage', {
             anchors:['main', 'video', 'functions', 'activation', 'faq'],
             autoScrolling:true,
             scrollHorizontally: true,
-            // responsiveWidth: 768
+            onScrollOverflow: function(section, slide, position, direction) {
+
+                const headerTracker = (section, position) => {
+                    if (position < 50 && section == 'main') {
+                        header.classList.remove("compressed");
+                        main.classList.remove("compressed");
+                    } else {
+                        header.classList.add("compressed");
+                        main.classList.add("compressed");
+                    }
+                }
+
+                headerTracker(section.anchor, position)
+            }
+
         });
     </script>
 
