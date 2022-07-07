@@ -4,15 +4,15 @@
 
 @font-face {
   font-family: 'Atrament Medium';
-  src: url("../../assets/fonts/Atrament-3-Light.otf"); }
+  src: url("../../assets/fonts/Atrament-5-Medium.otf"); }
 
 @font-face {
   font-family: 'Atrament Bold';
-  src: url("../../assets/fonts/Atrament-3-Light.otf"); }
+  src: url("../../assets/fonts/Atrament-7-Bold.otf"); }
 
 @font-face {
   font-family: 'Atrament Heavy';
-  src: url("../../assets/fonts/Atrament-3-Light.otf"); }
+  src: url("../../assets/fonts/Atrament-8-Heavy.otf"); }
 
 @font-face {
   font-family: 'MuseoSans 500';
@@ -51,7 +51,7 @@ p {
   display: inline-block;
   padding: 15px 20px 5px 20px; }
 
-.fullpage__main-wrapper {
+.main-download-wrapper {
   overflow-x: hidden; }
 
 .header, .header-mobile {
@@ -217,22 +217,25 @@ p {
     padding: 350px 0 90px 0; }
     @media screen and (max-width: 1200px) {
       .main.compressed {
-        margin-top: 0; } }
+        padding: 400px 0 90px 0; } }
+    @media screen and (max-width: 992px) {
+      .main.compressed {
+        padding: 350px 0 90px 0; } }
+    @media screen and (max-width: 768px) {
+      .main.compressed {
+        padding: 180px 0; } }
   @media screen and (max-width: 1200px) {
     .main {
-      margin-top: 193px;
-      padding: 220px 0 90px 0; } }
+      padding: 400px 0 90px 0; } }
   @media screen and (max-width: 992px) {
     .main {
-      margin-top: 157px;
       overflow: hidden;
-      padding: 180px 0 90px 0; }
+      padding: 350px 0 90px 0; }
       .main .col-md-6 {
         width: 54%; } }
   @media screen and (max-width: 768px) {
     .main {
-      margin-top: 90px;
-      padding: 90px 0; } }
+      padding: 180px 0; } }
   @media screen and (max-width: 992px) {
     .main .main__wrapper-info {
       width: 46%; } }

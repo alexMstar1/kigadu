@@ -30,7 +30,7 @@ p
   display: inline-block
   padding: 15px 20px 5px 20px
 
-.fullpage__main-wrapper
+.main-download-wrapper
   overflow-x: hidden
 
 .header, .header-mobile
@@ -188,20 +188,21 @@ p
   &.compressed
     padding: 350px 0 90px 0
     @media screen and (max-width: $xlarge)
-      margin-top: 0
+      padding: 400px 0 90px 0
+    @media screen and (max-width: $large)
+      padding: 350px 0 90px 0
+    @media screen and (max-width: $medium)
+      padding: 180px 0
 
   @media screen and (max-width: $xlarge)
-    margin-top: 193px
-    padding: 220px 0 90px 0
+    padding: 400px 0 90px 0
   @media screen and (max-width: $large)
-    margin-top: 157px
     overflow: hidden
-    padding: 180px 0 90px 0
+    padding: 350px 0 90px 0
     .col-md-6
       width: 54%
   @media screen and (max-width: $medium)
-    margin-top: 90px
-    padding: 90px 0
+    padding: 180px 0
 
   .main__wrapper-info
     @media screen and (max-width: $large)

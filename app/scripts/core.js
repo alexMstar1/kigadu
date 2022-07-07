@@ -1,3 +1,46 @@
+// Swiper initialization
+var phoneSlider = new Swiper(".phone-slider__swiper", {
+  autoplay: {
+      delay: 5000,
+  },
+  rewind: true,
+  navigation: {
+      nextEl: ".swiper-button-next-unique",
+      prevEl: ".swiper-button-prev-unique",
+  },
+});
+
+var functionsSlider = new Swiper(".functions-slider__swiper", {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  navigation: {
+      nextEl: ".swiper-button-next-unique",
+      prevEl: ".swiper-button-prev-unique",
+  },
+  breakpoints: {
+      1400: {slidesPerView: 4},
+      1200: {slidesPerView: 3},
+      768: {slidesPerView: 2},
+      0: {slidesPerView: 1}
+  }
+});
+
+// Header tracker
+window.onscroll = () => {headerTracker()};
+
+const header = document.querySelector('.header')
+const main = document.querySelector('.main')
+
+const headerTracker = () => {
+  if (window.pageYOffset > 50) {
+    header.classList.add('compressed');
+    main.classList.add('compressed');
+  } else {
+    header.classList.remove('compressed');
+    main.classList.remove('compressed');
+  }
+}
+
 // Video controls onclick
 let video = document.querySelector('.video__src')
 
@@ -13,17 +56,6 @@ for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function() {
     this.classList.toggle("active")
   });
-}
-
-// Download button scroll to the end
-const scrollToEnd = (selector) => {
-  document.querySelector(selector).scrollIntoView({block: "end", behavior: "smooth"})
-}
-
-let downloadBtn = document.querySelector('#toDownload')
-
-downloadBtn.onclick = () => {
-  scrollToEnd('.download')
 }
 
 
