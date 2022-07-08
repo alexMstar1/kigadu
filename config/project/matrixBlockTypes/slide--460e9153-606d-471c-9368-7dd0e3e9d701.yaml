@@ -1,0 +1,71 @@
+field: f8d2e7be-0a3f-4498-b4d4-0cb71b8c96b3 # Main Phone Slider
+fieldLayouts:
+  a834cd07-65d6-418f-8705-4dbd2520b563:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: ccb86c18-88d9-4b25-8380-b5edd87356df # Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f79c4ecc-f803-4ec7-a7e6-61ac69cbcb2d
+            warning: null
+            width: 100
+        name: Content
+        uid: 001f26d6-6d04-4d33-8d31-bd6fed87302b
+fields:
+  ccb86c18-88d9-4b25-8380-b5edd87356df: # Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: image
+    instructions: null
+    name: Image
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:ea378c46-08de-4f28-a70f-b33e8717b63c' # Phone Slider Volume
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ea378c46-08de-4f28-a70f-b33e8717b63c' # Phone Slider Volume
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: 'Add Phone Slider Image'
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources:
+        - 'volume:ea378c46-08de-4f28-a70f-b33e8717b63c' # Phone Slider Volume
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+handle: slide
+name: Slide
+sortOrder: 1

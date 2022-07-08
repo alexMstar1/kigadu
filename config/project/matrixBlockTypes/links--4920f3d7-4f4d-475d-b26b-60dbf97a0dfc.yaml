@@ -1,0 +1,72 @@
+field: 49620d32-6a8d-4412-8faf-ee5def515618 # Download LInks
+fieldLayouts:
+  f376ecd7-9b59-445d-8c52-04478fb2fc22:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 3c7ca685-aeac-43cb-896a-1a25cb25e639 # App Store
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 239f87e5-6bee-4d66-8edf-4c69928706fe
+            warning: null
+            width: 100
+          -
+            fieldUid: ba6c7b4d-cf2f-41b2-a1de-b65920efec1e # Google Play
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d02a58d9-1924-4a2a-8858-57f7f59f6cff
+            warning: null
+            width: 100
+        name: Content
+        uid: 13526bcc-56e3-4798-8eb6-c366a0de5624
+fields:
+  3c7ca685-aeac-43cb-896a-1a25cb25e639: # App Store
+    columnSuffix: lgvohkae
+    contentColumnType: text
+    fieldGroup: null
+    handle: appStore
+    instructions: null
+    name: 'App Store'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  ba6c7b4d-cf2f-41b2-a1de-b65920efec1e: # Google Play
+    columnSuffix: ilxypsjz
+    contentColumnType: text
+    fieldGroup: null
+    handle: googlePlay
+    instructions: null
+    name: 'Google Play'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: links
+name: Links
+sortOrder: 1

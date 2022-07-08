@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: f2f16a93-289b-40f8-afaf-0c0fd0ece0ea # Download
+handle: downloadLinks
+instructions: 'There you can change Market app download links'
+name: 'Download LInks'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_downloadlinks}}'
+  maxBlocks: 1
+  minBlocks: 1
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

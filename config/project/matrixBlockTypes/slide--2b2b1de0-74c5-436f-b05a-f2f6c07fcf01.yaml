@@ -1,0 +1,131 @@
+field: d8cc80bc-d097-4fa2-b7f1-199bb0f40cc7 # Functions Slider
+fieldLayouts:
+  1eebe151-b265-415b-badb-a42f11613ad3:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 348e7e39-a4c5-4814-a3b8-0f11829c1b57 # Slide Image
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5d64bc2-3d3e-4ee7-8706-bda68e9f61d5
+            warning: null
+            width: 25
+          -
+            fieldUid: 4394af70-ef5d-4e24-80f3-5dc6fff12b9f # Slide Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1671c9f8-3ca0-42ec-9d86-1ec2afa5971b
+            warning: null
+            width: 75
+          -
+            fieldUid: 1e9cf572-cc71-49c9-aeaf-23a819e66b36 # Slide Description
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a712a780-a104-4965-8e99-6723dad999d6
+            warning: null
+            width: 100
+        name: Content
+        uid: 2a17d7af-ebd7-464d-8633-547d22ab518d
+fields:
+  1e9cf572-cc71-49c9-aeaf-23a819e66b36: # Slide Description
+    columnSuffix: xkupjibh
+    contentColumnType: text
+    fieldGroup: null
+    handle: slideDescription
+    instructions: null
+    name: 'Slide Description'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  348e7e39-a4c5-4814-a3b8-0f11829c1b57: # Slide Image
+    columnSuffix: null
+    contentColumnType: string
+    fieldGroup: null
+    handle: slideImage
+    instructions: null
+    name: 'Slide Image'
+    searchable: false
+    settings:
+      allowSelfRelations: false
+      allowSubfolders: false
+      allowUploads: true
+      allowedKinds:
+        - image
+      defaultUploadLocationSource: 'volume:060f9deb-bd35-46ca-89fa-d768691661fd' # Functions Slider Volume
+      defaultUploadLocationSubpath: null
+      localizeRelations: false
+      maxRelations: 1
+      minRelations: 1
+      previewMode: full
+      restrictFiles: true
+      restrictLocation: false
+      restrictedDefaultUploadSubpath: null
+      restrictedLocationSource: 'volume:ea378c46-08de-4f28-a70f-b33e8717b63c' # Phone Slider Volume
+      restrictedLocationSubpath: null
+      selectionCondition:
+        __assoc__:
+          -
+            - elementType
+            - craft\elements\Asset
+          -
+            - fieldContext
+            - global
+          -
+            - class
+            - craft\elements\conditions\assets\AssetCondition
+      selectionLabel: null
+      showSiteMenu: true
+      showUnpermittedFiles: false
+      showUnpermittedVolumes: false
+      source: null
+      sources:
+        - 'volume:060f9deb-bd35-46ca-89fa-d768691661fd' # Functions Slider Volume
+      targetSiteId: null
+      validateRelatedElements: false
+      viewMode: list
+    translationKeyFormat: null
+    translationMethod: site
+    type: craft\fields\Assets
+  4394af70-ef5d-4e24-80f3-5dc6fff12b9f: # Slide Title
+    columnSuffix: xzgluniu
+    contentColumnType: text
+    fieldGroup: null
+    handle: slideTitle
+    instructions: null
+    name: 'Slide Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: slide
+name: Slide
+sortOrder: 1

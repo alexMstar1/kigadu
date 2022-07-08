@@ -1,0 +1,283 @@
+{% extends "index" %}
+
+{% block content %}
+
+    <div class="main-download-wrapper">
+        <main class="main">
+            <div class="container">
+                <div class="row d-flex justify-content-between">
+                    <div class="col col-md-6 main__wrapper-info">
+                        {% set mainText = entry.mainText.all() %}
+
+                        {% if mainText|length %}
+                            {% for data in mainText %}
+                                <h1 class="main__title">
+                                    {{ data.mainTitle }}
+                                </h1>
+                                <p class="main__desc">
+                                    {{ data.mainDescription }}
+                                </p>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
+
+                    <div class="col col-md-6 main__wrapper-phone-slider">
+                        <div class="main__phone-slider phone-slider">
+                            <div class="main__circle1"></div>
+                            <div class="main__circle2"></div>
+                            <div class="main__circle3"></div>
+
+                            <div class="phone-slider__wrapper">
+                                <div class="swiper phone-slider__swiper">
+                                    <div class="swiper-wrapper">
+                                        {% set mainPhoneSlider = entry.mainPhoneSlider.all() %}
+
+                                        {% for block in mainPhoneSlider %}
+                                            <div class="swiper-slide">
+                                                <img src="{{ block.url }}" alt="">
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                    <div class="swiper-button-next-unique">
+                                        <svg id="SVGDoc" width="94" height="176" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 94 176">
+                                            <g><g>
+                                                    <path d="M68.9253,150.2583v0l-43,-66.699v0l43,-58.5v0" fill-opacity="0" fill="#ffffff" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="1" stroke="#f2f2f2" stroke-miterlimit="20" stroke-width="5"></path>
+                                                </g></g>
+                                        </svg>
+                                    </div>
+                                    <div class="swiper-button-prev-unique">
+                                        <svg id="SVGDoc" width="94" height="176" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 94 176">
+                                            <g><g>
+                                                    <path d="M68.9253,150.2583v0l-43,-66.699v0l43,-58.5v0" fill-opacity="0" fill="#ffffff" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="1" stroke="#f2f2f2" stroke-miterlimit="20" stroke-width="5"></path>
+                                                </g></g>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <section class="download" id="download">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-6">
+                        <h2 class="download__title">
+                            <span class="selected download__selected">Jetzt App downloaden</span>
+                            <span>& mit Ihrem Kindergarten kommunizieren!</span>
+                        </h2>
+                        <div class="download__links">
+                            {% set downloadLinks = entry.downloadLinks.all() %}
+
+                            {% if downloadLinks|length %}
+                                {% for link in downloadLinks %}
+                                    <a href="{{ link.appStore }}">
+                                        <img src="{{ siteUrl }}static/assets/img/appstore-de.png" alt="">
+                                    </a>
+                                    <a href="{{ link.googlePlay }}">
+                                        <img src="{{ siteUrl }}static/assets/img/googleplay-de.png" alt="">
+                                    </a>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                <div class="mwcontroll-slider"></div>
+            </div>
+        </section>
+    </div>
+
+
+        <section class="video">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-12">
+                        <h2 class="video__title d-flex justify-content-center">
+                            Die Kigadu Eltern-App in 60 Sekunden erklärt
+                        </h2>
+                    </div>
+                </div>
+
+            </div>
+            {% set video = entry.video.all() %}
+
+            {% for block in video %}
+                <video class="video__src" src="{{ block.url }}" poster="{{ siteUrl }}static/assets/img/installation-placeholder.svg">
+            {% endfor %}
+
+            </video>
+            <div class="mwcontroll-slider"></div>
+        </section>
+
+
+        <section class="functions" id="functions">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-12 d-flex align-items-center flex-column">
+                        <h2 class="functions__title">
+                            <span class="selected">Die Funktionen der App</span>
+                        </h2>
+                        <p class="functions__desc">
+                            Der neue Kigadu-Messenger bietet viele Funktionen, um die Kommunikation zwischen Eltern und Pädagog*innen zu erleichtern. Der Funktionsumfang wird laufend erweitert.
+                        </p>
+                    </div>
+                </div>
+                <div class="mwcontroll-slider"></div>
+            </div>
+            <div class="swiper functions-slider__swiper">
+                <div class="swiper-wrapper">
+                    {% set functionsSlider = entry.functionsSlider.all() %}
+
+                    {% for block in functionsSlider %}
+                        {% set image = block.slideImage.all() %}
+                                <div class="swiper-slide">
+                                    <div class="item d-flex flex-column align-items-center">
+                                        {% for i in image %}
+                                            <img src="{{ i.url }}" alt="" class="item__thumb">
+                                        {% endfor %}
+                                        <h3 class="item__title">{{ block.slideTitle }}</h3>
+                                        <p class="item__desc">{{ block.slideDescription }}</p>
+                                    </div>
+                                </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+            <div class="swiper-button-prev-unique">
+                <img src="{{ siteUrl }}static/assets/img/functions-slider-arrow.svg" alt="">
+            </div>
+            <div class="swiper-button-next-unique">
+                <img src="{{ siteUrl }}static/assets/img/functions-slider-arrow.svg" alt="">
+            </div>
+        </section>
+
+
+        <section class="activation" id="activation">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-12 d-flex justify-content-center">
+                        <h2 class="activation__title">
+                            Die App in drei Schritten aktivieren
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activation__container">
+                <div class="container">
+                    <div class="row">
+                        <div class="col col-md-12">
+                            <div class="activation__steps steps justify-content-center align-items-center">
+                                <div class="step__number">
+                                    1
+                                </div>
+                                <div class="step__arrow">
+                                    <img src="{{ siteUrl }}static/assets/img/arrow.svg" alt="">
+                                </div>
+                                <div class="step__number">
+                                    2
+                                </div>
+                                <div class="step__arrow">
+                                    <img src="{{ siteUrl }}static/assets/img/arrow.svg" alt="">
+                                </div>
+                                <div class="step__number">
+                                    3
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="activation__items items">
+                        <div class="row">
+                            <div class="col col-md-4">
+                                <div class="item__step-number justify-content-center align-items-center">
+                                    <div class="step__arrow"><img src="{{ siteUrl }}static/assets/img/arrow.svg" alt=""></div>
+                                    <div class="step__number">1</div>
+                                    <div class="step__arrow"><img src="{{ siteUrl }}static/assets/img/arrow.svg" alt=""></div>
+                                </div>
+                                <div class="icon-wrapper d-flex justify-content-center">
+                                    <img src="{{ siteUrl }}static/assets/img/activation-steps/house.png" alt="" class="activation_thumb">
+                                </div>
+                                <h2 class="item__title">Kindergarten informiert</h2>
+                                <p class="item__desc">Error atque harum quisquam? Modi perspiciatis aliquid eum saepe eveniet! Odit ad laboriosam ut ex ea.</p>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="item__step-number justify-content-center align-items-center">
+                                    <div class="step__arrow"><img src="{{ siteUrl }}static/assets/img/arrow.svg" alt="" class="img-reverse"></div>
+                                    <div class="step__number">2</div>
+                                    <div class="step__arrow"><img src="{{ siteUrl }}static/assets/img/arrow.svg" alt="" class="img-reverse "></div>
+                                </div>
+                                <div class="icon-wrapper d-flex justify-content-center">
+                                    <img src="{{ siteUrl }}static/assets/img/activation-steps/check.png" alt="" class="activation_thumb">
+                                </div>
+                                <h2 class="item__title">E-Mail-Adresse bestätigen</h2>
+                                <p class="item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error atque harum quisquam? </p>
+                            </div>
+                            <div class="col col-md-4">
+                                <div class="item__step-number justify-content-center align-items-center">
+                                    <div class="step__arrow"><img src="{{ siteUrl }}static/assets/img/arrow.svg" alt=""></div>
+                                    <div class="step__number">3</div>
+                                    <div class="step__arrow"><img src="{{ siteUrl }}static/assets/img/arrow.svg" alt=""></div>
+                                </div>
+                                <div class="icon-wrapper d-flex justify-content-center">
+                                    <img src="{{ siteUrl }}static/assets/img/activation-steps/phone.png" alt="" class="activation_thumb">
+                                </div>
+                                <h2 class="item__title">App downloaden & einsteigen</h2>
+                                <p class="item__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ad laboriosam ut ex ea, voluptatibus quia sapiente ab voluptates possimus.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mwcontroll-slider"></div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-md-12 d-flex justify-content-center">
+                        <h2 class="faq__title">
+                            <span class="selected">Häufig gestellte Fragen</span>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+
+        {% set faq = entry.faq.all() %}
+
+        {% if faq|length %}
+                {% for qa in faq %}
+                    <div class="faq-question__wrapper accordion noselect">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col col-md-12">
+                                    <div class="faq__question question d-flex justify-content-between">
+                                        <h2 class="question__text">
+                                            {{ qa.question }}
+                                        </h2>
+                                        <div class="question__toggle">
+                                            <svg id="SVGDoc" width="143" height="76" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 143 76">
+                                                <g><g>
+                                                        <path d="M118,25.5v0l-46.545,25.5v0l-45.694,-25.5v0" fill-opacity="0" fill="#ffffff" stroke-linejoin="miter" stroke-linecap="butt" stroke-opacity="1" stroke="#d8d8d8" stroke-miterlimit="20" stroke-width="5"></path>
+                                                    </g></g>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <p class="faq__answer answer">
+                                        {{ qa.answer }}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+        {% endif %}
+
+        </section>
+
+
+{% endblock %}

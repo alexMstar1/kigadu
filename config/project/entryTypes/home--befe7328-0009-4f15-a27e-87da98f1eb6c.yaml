@@ -1,0 +1,125 @@
+fieldLayouts:
+  643da628-fce4-465e-85c4-446efe1427e9:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f02b515d-0c06-44d3-94ef-4efef458f860
+            warning: null
+            width: 100
+          -
+            fieldUid: 04fcd769-20c6-4d28-9fec-d90b7364de72 # Main Text
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7c6a1d02-7561-4101-8848-f054c652fc80
+            warning: null
+            width: 100
+          -
+            fieldUid: f8d2e7be-0a3f-4498-b4d4-0cb71b8c96b3 # Main Phone Slider
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6f25997d-4d4c-477e-b229-52eef8e7637a
+            warning: null
+            width: 50
+          -
+            fieldUid: d25968d5-b312-449c-92e8-29e7d57bebb8 # Main Phone Slider Autoplay
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: de6ec977-2875-4e34-9f02-47c108c7be96
+            warning: null
+            width: 50
+        name: Main
+        uid: 126df8a5-d66d-4f4a-af05-192104dfdc82
+      -
+        elements:
+          -
+            fieldUid: 49620d32-6a8d-4412-8faf-ee5def515618 # Download LInks
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 536b20b5-8a22-43f9-a6ab-c703e8d495a8
+            warning: null
+            width: 100
+        name: Download
+        uid: 5c8e6b9e-c2e9-46f0-b4f7-2c90cd107273
+      -
+        elements:
+          -
+            fieldUid: acafd8ff-9f2b-4b2e-9d86-edf3f1296ba5 # Video
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eed14612-7557-4617-aa38-bad33f76f565
+            warning: null
+            width: 100
+        name: Video
+        uid: 6b25fbba-dd72-47a8-b21e-6ac81debe167
+      -
+        elements:
+          -
+            fieldUid: d8cc80bc-d097-4fa2-b7f1-199bb0f40cc7 # Functions Slider
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5567daa-4041-4f9a-a0c6-ec132c56178d
+            warning: null
+            width: 100
+        name: Functions
+        uid: 40698eea-7e70-4c39-a223-9adf51039693
+      -
+        elements:
+          -
+            fieldUid: 69261370-2bf6-497a-b00c-e265b2c8d80c # FAQ
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dd3646e4-2eac-4db4-a2b2-d457b79dd45d
+            warning: null
+            width: 100
+        name: FAQ
+        uid: 30a14e1a-7f66-43b7-b077-238bce567acf
+handle: home
+hasTitleField: false
+name: Home
+section: 5fd64946-864c-4e87-ad86-956963448525 # Home
+sortOrder: 1
+titleFormat: '{section.name|raw}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

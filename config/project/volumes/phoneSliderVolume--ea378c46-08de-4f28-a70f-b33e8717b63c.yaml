@@ -1,0 +1,39 @@
+fieldLayouts:
+  37dd732e-495b-4cb7-9674-bb2b97746705:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 4a3034e7-d63c-48ad-aef9-b5675b4db571
+            warning: null
+            width: 100
+        name: Content
+        uid: 63e49022-b8d9-4bc4-89b7-1c7896e9ad30
+fs: phoneSliderFilesystem
+handle: phoneSliderVolume
+name: 'Phone Slider Volume'
+sortOrder: 3
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

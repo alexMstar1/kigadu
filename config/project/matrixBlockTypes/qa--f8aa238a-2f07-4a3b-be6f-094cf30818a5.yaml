@@ -1,0 +1,72 @@
+field: 69261370-2bf6-497a-b00c-e265b2c8d80c # FAQ
+fieldLayouts:
+  6fa083c1-db2c-4b13-b4cb-66886647ddcb:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d9d88c77-9a94-4ace-b6ed-dbfb2f21eef6 # Question
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e1f2ef62-783d-47d8-afd1-a1b81bd2b6a5
+            warning: null
+            width: 75
+          -
+            fieldUid: b9054739-d4e9-455f-aaf7-59319cc1475a # Answer
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9878b670-7a44-4c2d-aa35-c3cb6c5e4e04
+            warning: null
+            width: 75
+        name: Content
+        uid: 551b7a2d-9324-4689-92f4-ff5ed4191a59
+fields:
+  b9054739-d4e9-455f-aaf7-59319cc1475a: # Answer
+    columnSuffix: qbgtpwie
+    contentColumnType: text
+    fieldGroup: null
+    handle: answer
+    instructions: null
+    name: Answer
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d9d88c77-9a94-4ace-b6ed-dbfb2f21eef6: # Question
+    columnSuffix: uyftjsjy
+    contentColumnType: text
+    fieldGroup: null
+    handle: question
+    instructions: null
+    name: Question
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: qa
+name: QA
+sortOrder: 1

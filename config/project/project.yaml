@@ -1,0 +1,80 @@
+dateModified: 1657295835
+email:
+  fromEmail: admin@kigadu.com
+  fromName: kigadu
+  transportType: craft\mail\transportadapters\Sendmail
+fs:
+  functionsSliderFilesystem:
+    hasUrls: true
+    name: 'Functions Slider Filesystem'
+    settings:
+      path: '@webroot/static/assets/img/functions-slider'
+    type: craft\fs\Local
+    url: '@web/static/assets/img/functions-slider'
+  phoneSliderFilesystem:
+    hasUrls: true
+    name: 'Phone Slider Filesystem'
+    settings:
+      path: '@webroot/static/assets/img/phone-slider'
+    type: craft\fs\Local
+    url: '@web/static/assets/img/phone-slider'
+  videoFilesystem:
+    hasUrls: true
+    name: 'Video Filesystem'
+    settings:
+      path: '@webroot/static/assets/video'
+    type: craft\fs\Local
+    url: '@web/static/assets/video'
+meta:
+  __names__:
+    0ba7cf48-53f5-492c-b1c9-0708fa70eec2: 'Main Description' # Main Description
+    1e9cf572-cc71-49c9-aeaf-23a819e66b36: 'Slide Description' # Slide Description
+    2b2b1de0-74c5-436f-b05a-f2f6c07fcf01: Slide # Slide
+    3c7ca685-aeac-43cb-896a-1a25cb25e639: 'App Store' # App Store
+    04fcd769-20c6-4d28-9fec-d90b7364de72: 'Main Text' # Main Text
+    5fd64946-864c-4e87-ad86-956963448525: Home # Home
+    7d6649d1-9215-403c-865b-7d6cab91d90a: 'Video Volume' # Video Volume
+    7fba1c03-62ed-4b59-9527-dff9c5495368: 'Autoplay Switch' # Autoplay Switch
+    45c467d8-6c9c-4ebb-8ede-0383a1a4d58e: Main # Main
+    060f9deb-bd35-46ca-89fa-d768691661fd: 'Functions Slider Volume' # Functions Slider Volume
+    81d0be23-64b3-4991-a504-b45f2bcc8b4e: 'Autoplay Delay' # Autoplay Delay
+    094ca1b0-0c84-48c1-aa7b-72b5ed5167af: kigadu # kigadu
+    320cf7ff-af10-4b8b-a766-66c6fc7017ab: Video # Video
+    348e7e39-a4c5-4814-a3b8-0f11829c1b57: 'Slide Image' # Slide Image
+    460e9153-606d-471c-9368-7dd0e3e9d701: Slide # Slide
+    3545f6fc-64be-48a7-8474-813dbfe828a1: kigadu # kigadu
+    4394af70-ef5d-4e24-80f3-5dc6fff12b9f: 'Slide Title' # Slide Title
+    4920f3d7-4f4d-475d-b26b-60dbf97a0dfc: Links # Links
+    7708e6fa-7399-4e9f-9e4f-ef2947fd7870: 'Autoplay Settings' # Autoplay Settings
+    38791b6f-239d-4bb7-8ad0-df032b89bc47: Common # Common
+    49620d32-6a8d-4412-8faf-ee5def515618: 'Download LInks' # Download LInks
+    18605539-416f-4e2e-94c7-644e56384c52: Functions # Functions
+    69261370-2bf6-497a-b00c-e265b2c8d80c: FAQ # FAQ
+    acafd8ff-9f2b-4b2e-9d86-edf3f1296ba5: Video # Video
+    b08d0217-b4f5-4d25-b119-a2a90950851b: 'Module Text' # Module Text
+    b9054739-d4e9-455f-aaf7-59319cc1475a: Answer # Answer
+    ba6c7b4d-cf2f-41b2-a1de-b65920efec1e: 'Google Play' # Google Play
+    befe7328-0009-4f15-a27e-87da98f1eb6c: Home # Home
+    ccb86c18-88d9-4b25-8380-b5edd87356df: Image # Image
+    d0aeb698-79b0-4fb6-9656-6afb8ccaebd0: 'Main Title' # Main Title
+    d8cc80bc-d097-4fa2-b7f1-199bb0f40cc7: 'Functions Slider' # Functions Slider
+    d9d88c77-9a94-4ace-b6ed-dbfb2f21eef6: Question # Question
+    d25968d5-b312-449c-92e8-29e7d57bebb8: 'Main Phone Slider Autoplay' # Main Phone Slider Autoplay
+    ea378c46-08de-4f28-a70f-b33e8717b63c: 'Phone Slider Volume' # Phone Slider Volume
+    f2f16a93-289b-40f8-afaf-0c0fd0ece0ea: Download # Download
+    f8aa238a-2f07-4a3b-be6f-094cf30818a5: QA # QA
+    f8d2e7be-0a3f-4498-b4d4-0cb71b8c96b3: 'Main Phone Slider' # Main Phone Slider
+    fa4c60b2-9ab7-46ff-8fbb-8c0c835bde2e: 'Title And Description' # Title And Description
+    fea1b593-523c-4e89-abc1-4201541cb139: FAQ # FAQ
+system:
+  edition: solo
+  live: true
+  name: kigadu
+  schemaVersion: 4.0.0.9
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

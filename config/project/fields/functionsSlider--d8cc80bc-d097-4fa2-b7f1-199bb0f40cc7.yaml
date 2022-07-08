@@ -1,0 +1,16 @@
+columnSuffix: null
+contentColumnType: string
+fieldGroup: 18605539-416f-4e2e-94c7-644e56384c52 # Functions
+handle: functionsSlider
+instructions: 'Here you can set up activation slider image and description'
+name: 'Functions Slider'
+searchable: false
+settings:
+  contentTable: '{{%matrixcontent_functionsslider}}'
+  maxBlocks: null
+  minBlocks: null
+  propagationKeyFormat: null
+  propagationMethod: all
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

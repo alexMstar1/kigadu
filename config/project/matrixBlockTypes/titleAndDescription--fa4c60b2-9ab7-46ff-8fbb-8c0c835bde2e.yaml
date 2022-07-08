@@ -1,0 +1,72 @@
+field: 04fcd769-20c6-4d28-9fec-d90b7364de72 # Main Text
+fieldLayouts:
+  4fe9737d-2530-4f8f-bdbe-674a705242c5:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: d0aeb698-79b0-4fb6-9656-6afb8ccaebd0 # Main Title
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ff3b72b3-af91-492f-8f62-60be90b49769
+            warning: null
+            width: 50
+          -
+            fieldUid: 0ba7cf48-53f5-492c-b1c9-0708fa70eec2 # Main Description
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 295c6498-f1e9-4450-bab9-50a5be498213
+            warning: null
+            width: 50
+        name: Content
+        uid: cf9e6e09-2832-4334-a854-e0e87a64e8dc
+fields:
+  0ba7cf48-53f5-492c-b1c9-0708fa70eec2: # Main Description
+    columnSuffix: yvuegwsv
+    contentColumnType: text
+    fieldGroup: null
+    handle: mainDescription
+    instructions: null
+    name: 'Main Description'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+  d0aeb698-79b0-4fb6-9656-6afb8ccaebd0: # Main Title
+    columnSuffix: jbpbtwel
+    contentColumnType: text
+    fieldGroup: null
+    handle: mainTitle
+    instructions: null
+    name: 'Main Title'
+    searchable: false
+    settings:
+      byteLimit: null
+      charLimit: null
+      code: false
+      columnType: null
+      initialRows: 4
+      multiline: false
+      placeholder: null
+      uiMode: normal
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\PlainText
+handle: titleAndDescription
+name: 'Title And Description'
+sortOrder: 1

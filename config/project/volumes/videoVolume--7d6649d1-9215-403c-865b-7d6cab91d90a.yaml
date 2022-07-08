@@ -1,0 +1,39 @@
+fieldLayouts:
+  b1edebb8-b076-4f75-8d63-f6456610771d:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: 26867f5d-2169-4e96-a5cb-8f66c28833ff
+            warning: null
+            width: 100
+        name: Content
+        uid: a2582d73-7b9c-4bd3-bb37-aac264f26b9b
+fs: videoFilesystem
+handle: videoVolume
+name: 'Video Volume'
+sortOrder: 4
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''

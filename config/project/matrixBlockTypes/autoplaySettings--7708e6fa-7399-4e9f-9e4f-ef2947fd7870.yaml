@@ -1,0 +1,68 @@
+field: d25968d5-b312-449c-92e8-29e7d57bebb8 # Main Phone Slider Autoplay
+fieldLayouts:
+  e6f6b84a-88d4-4172-be48-12a780ce3c22:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: 7fba1c03-62ed-4b59-9527-dff9c5495368 # Autoplay Switch
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d036fc1-320d-4ffa-8ecc-07733e77aa71
+            warning: null
+            width: 50
+          -
+            fieldUid: 81d0be23-64b3-4991-a504-b45f2bcc8b4e # Autoplay Delay
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0d14f3fc-5122-4fcb-898a-9921ee52b095
+            warning: null
+            width: 50
+        name: Content
+        uid: a6a9566e-bbbb-4559-801c-eef320f75837
+fields:
+  7fba1c03-62ed-4b59-9527-dff9c5495368: # Autoplay Switch
+    columnSuffix: ngfglgad
+    contentColumnType: boolean
+    fieldGroup: null
+    handle: autoplaySwitch
+    instructions: null
+    name: 'Autoplay Switch'
+    searchable: false
+    settings:
+      default: true
+      offLabel: 'Autoplay Disables'
+      onLabel: 'Autoplay Enabled'
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Lightswitch
+  81d0be23-64b3-4991-a504-b45f2bcc8b4e: # Autoplay Delay
+    columnSuffix: wnshbxsa
+    contentColumnType: smallint(2)
+    fieldGroup: null
+    handle: autoplayDelay
+    instructions: null
+    name: 'Autoplay Delay'
+    searchable: false
+    settings:
+      decimals: 0
+      defaultValue: 5
+      max: 15
+      min: 1
+      prefix: null
+      previewCurrency: null
+      previewFormat: decimal
+      size: null
+      suffix: null
+    translationKeyFormat: null
+    translationMethod: none
+    type: craft\fields\Number
+handle: autoplaySettings
+name: 'Autoplay Settings'
+sortOrder: 1

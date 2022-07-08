@@ -1,0 +1,39 @@
+fieldLayouts:
+  6c1fa783-7b6e-4196-8912-b17ada09ba47:
+    tabs:
+      -
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            id: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AssetTitleField
+            uid: be0cfa0b-828b-4a27-9fa7-0343571212cb
+            warning: null
+            width: 100
+        name: Content
+        uid: 5d534501-df62-43ea-8132-f7a664b047ea
+fs: functionsSliderFilesystem
+handle: functionsSliderVolume
+name: 'Functions Slider Volume'
+sortOrder: 5
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+transformFs: ''
+transformSubpath: ''
