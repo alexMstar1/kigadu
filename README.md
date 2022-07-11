@@ -3,10 +3,11 @@
 
 ## Installation
 
-1. copy <code>.env.example</code> and rename it ro <code>.env</code>
-2. run <code>docker-compose -p kigadu up --build -d</code>
-3. run <code>docker exec -it kigadu-core bash</code>
-4. than in the opened terminal run <code>php craft setup</code>
+1. switch to cms branch <code>git checkout cms</code>
+2. copy <code>.env.example</code> and rename it ro <code>.env</code>
+3. run <code>docker-compose -p kigadu up --build -d</code>
+4. run <code>docker exec -it kigadu-core bash</code>
+5. than in the opened terminal run <code>php craft setup</code>
 - leave database settings as suggested
 - then create your profile
 - ATTENTION: set url setting to <code>http://localhost:8081</code>
