@@ -3,11 +3,13 @@
 
 ## Installation
 
-1. switch to cms branch <code>git checkout cms</code>
-2. copy <code>.env.example</code> and rename it ro <code>.env</code>
-3. run <code>docker-compose -p kigadu up --build -d</code>
-4. run <code>docker exec -it kigadu-core bash</code>
-5. than in the opened terminal run <code>php craft setup</code>
+1. clone repo <code>git clone https://github.com/hellsontime/crispy-telegram.git </code>
+2. go to new directory <code>cd crispy-telegram/</code>
+3. switch to cms branch <code>git checkout cms</code>
+5. copy <code>.env.example</code> and rename it ro <code>.env</code>
+6. run <code>docker compose -p kigadu up --build -d</code>
+7. run <code>docker exec -it kigadu-core bash</code>
+8. than in the opened terminal run <code>php craft setup</code>
 - leave database settings as suggested
 - then create your profile
 - ATTENTION: set url setting to <code>http://localhost:8081</code>
