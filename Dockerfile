@@ -40,8 +40,16 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Copy existing application directory contents
 COPY . /var/www/html
 
+# Create user 
+RUN useradd -ms /bin/bash admin
+
+# Give premissson to the user
+RUN chown -R admin:admin /var/www/html
+RUN chmod 755 /var/www/html
+USER admin
+
 # Copy existing application directory permissions
-COPY --chown=www-data:www-data . /var/www/html
+COPY --chown=admin:admin . /var/www/html
 
 # Expose port 9000 and start php-fpm server
 EXPOSE 9000
