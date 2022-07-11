@@ -1,23 +1,6 @@
 version: '3.7'
 services:
 
-    #Nginx Service
-    webserver:
-        image: nginx:alpine
-        container_name: webserver
-        restart: unless-stopped
-        tty: true
-        ports:
-            - "8081:80"
-            - "444:443"
-        volumes:
-            - ./web:/var/www/html/web
-            - ./docker-configs/nginx/conf.d/:/etc/nginx/conf.d/
-        depends_on:
-            - kigadu-core
-        networks:
-            - kigadu-network
-
     #PHP Service
     kigadu-core:
         build:
@@ -35,10 +18,29 @@ services:
             DB_HOST: mysql
         working_dir: /var/www/html
         volumes:
-            # - ./:/var/www/html
             - ./docker-configs/php/local.ini:/usr/local/etc/php/conf.d/local.ini
+            - ./web/static:/web/static
         depends_on:
             - mysql
+        networks:
+            - kigadu-network
+
+    #Nginx Service
+    webserver:
+        image: nginx:alpine
+        container_name: webserver
+        restart: unless-stopped
+        tty: true
+        ports:
+            - "8081:80"
+            - "444:443"
+        working_dir: /var/www/html
+        volumes:
+            - ./:/var/www/html
+            - ./docker-configs/nginx/conf.d/:/etc/nginx/conf.d/
+            - ./web/static:/web/static
+        depends_on:
+            - kigadu-core
         networks:
             - kigadu-network
 
