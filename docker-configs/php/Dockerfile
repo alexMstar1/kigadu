@@ -1,11 +1,5 @@
 FROM php:8.0-fpm
 
-# Copy composer.lock and composer.json
-COPY composer.lock composer.json /var/www/html/
-
-# Set working directory
-WORKDIR /var/www/html/
-
 # Install dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
@@ -37,21 +31,18 @@ RUN apt-get -y update \
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
-# Copy existing application directory contents
-COPY . /var/www/html
+# Expose port 9000 and start php-fpm server
+EXPOSE 9000
+
+WORKDIR /src/
 
 # Create user 
 RUN useradd -ms /bin/bash admin
 
 # Give premissson to the user
-RUN chown -R admin:admin /var/www/html
-RUN chmod 755 /var/www/html
+RUN chown -R admin:admin /src/
+RUN chmod 755 /src/
 USER admin
 
 # Copy existing application directory permissions
-COPY --chown=admin:admin . /var/www/html
-
-# Expose port 9000 and start php-fpm server
-EXPOSE 9000
-
-RUN composer install --ignore-platform-reqs
+COPY --chown=admin:admin . /src/

@@ -1,4 +1,3 @@
-FROM  confluent/postgres-bw:0.1
+FROM nginx:latest
 
-RUN ["apt-get", "update"]
-RUN ["apt-get", "install", "-y", "vim"]
+COPY ./docker-configs/nginx/conf.d/app.conf /etc/nginx/conf.d/default.conf

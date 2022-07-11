@@ -1,50 +1,42 @@
-version: '3.7'
+version: '3.9'
 services:
-
-    #PHP Service
-    kigadu-core:
+    webserver:
+        container_name: webserver
         build:
             context: .
-            dockerfile: Dockerfile
-        image: kigadu-core
-        container_name: kigadu-core
-        restart: unless-stopped
-        tty: true
+            dockerfile: ./docker-configs/nginx/Dockerfile
+        ports:
+            - 8081:80
+        links:
+            - core
+        volumes_from:
+            - data
+        depends_on:
+            - core
+
+    core:
+        container_name: core
+        build:
+            context: .
+            dockerfile: ./docker-configs/php/Dockerfile
         env_file:
             - .env
-        environment:
-            SERVICE_NAME: kigadu-core
-            SERVICE_TAGS: dev
-            DB_HOST: mysql
-        working_dir: /var/www/html
         volumes:
             - ./docker-configs/php/local.ini:/usr/local/etc/php/conf.d/local.ini
-            - ./web/static:/web/static
+        volumes_from:
+            - data
         depends_on:
             - mysql
-        networks:
-            - kigadu-network
 
-    #Nginx Service
-    webserver:
-        image: nginx:alpine
-        container_name: webserver
-        restart: unless-stopped
-        tty: true
-        ports:
-            - "8081:80"
-            - "444:443"
-        working_dir: /var/www/html
+    data:
+        container_name: data
+        build:
+            context: .
+            dockerfile: ./docker-configs/data/Dockerfile
         volumes:
-            - ./:/var/www/html
-            - ./docker-configs/nginx/conf.d/:/etc/nginx/conf.d/
-            - ./web/static:/web/static
-        depends_on:
-            - kigadu-core
-        networks:
-            - kigadu-network
+            - /src
+        command: chmod -R 0777 /src
 
-    #MySQL Service
     mysql:
         image: mysql:5.7.22
         container_name: mysql
@@ -59,16 +51,7 @@ services:
             - mysql:/var/lib/mysql
             - ./docker-configs/mysql/my.cnf:/etc/mysql/my.cnf
             - ./docker-configs/mysql/init.sql:/etc/mysql/init/init.sql
-        networks:
-            - kigadu-network
 
-#Docker Networks
-networks:
-    kigadu-network:
-        name: kigadu-network
-        driver: bridge
-
-#Volumes
 volumes:
     mysql:
         driver: local
