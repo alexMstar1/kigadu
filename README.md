@@ -12,7 +12,6 @@
 8. than in the opened terminal run <code>php craft setup</code>
 - leave database settings as suggested
 - then create your profile
-- ATTENTION: set url setting to <code>http://localhost:8081</code>
 
 Then you can access web page - http://localhost:8081 <br>
 Admin panel - http://localhost:8081/admin
