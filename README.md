@@ -8,13 +8,13 @@
 3. switch to cms branch <code>git checkout cms</code>
 5. copy <code>.env.example</code> and rename it ro <code>.env</code>
 6. run <code>docker-compose -p kigadu up --build -d</code>
-7. run <code>docker exec -it kigadu-core bash</code>
+7. run <code>docker exec -it core bash</code>
 8. than in the opened terminal run <code>php craft setup</code>
 - leave database settings as suggested
 - then create your profile
 
-Then you can access web page - http://localhost:8081 <br>
-Admin panel - http://localhost:8081/admin
+You can access web page - http://localhost:8081 <br>
+Admin dashboard - http://localhost:8081/admin
 
 ## Fill the data
 
