@@ -50,7 +50,7 @@ services:
             MYSQL_DATABASE: kigadu
             MYSQL_USER: kigadu-admin
             MYSQL_PASSWORD: password
-            MYSQL_ALLOW_EMPTY_PASSWORD: false
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'false'
         volumes:
             - mysql:/var/lib/mysql
             - ./docker-configs/mysql/my.cnf:/etc/mysql/my.cnf
