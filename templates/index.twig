@@ -109,8 +109,10 @@
         </div>
     </footer>
 
-    <div class="navigation">
-        <a href="#download"><div class="navigation__item nav-main"></div></a>
+    {% set navigation = entry.navigationDots %}
+
+    <div class="navigation {{navigation.value}}">
+        <a href="#download"><div class="navigation__item nav-main active"></div></a>
         <a href="#video"><div class="navigation__item nav-video"></div></a>
         <a href="#functions"><div class="navigation__item nav-functions"></div></a>
         <a href="#activation"><div class="navigation__item nav-activation"></div></a>

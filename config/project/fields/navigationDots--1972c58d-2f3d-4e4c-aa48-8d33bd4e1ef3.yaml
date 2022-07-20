@@ -1,0 +1,34 @@
+columnSuffix: etaulacp
+contentColumnType: string
+fieldGroup: 38791b6f-239d-4bb7-8ad0-df032b89bc47 # Common
+handle: navigationDots
+instructions: 'Here you can change the position of the navigation dots on the screen'
+name: 'Navigation Dots'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Vertical
+        -
+          - value
+          - vertical
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Horizontal
+        -
+          - value
+          - horizontal
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons

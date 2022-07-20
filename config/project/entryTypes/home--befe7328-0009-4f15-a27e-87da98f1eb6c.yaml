@@ -115,6 +115,20 @@ fieldLayouts:
             width: 100
         name: FAQ
         uid: 30a14e1a-7f66-43b7-b077-238bce567acf
+      -
+        elements:
+          -
+            fieldUid: 1972c58d-2f3d-4e4c-aa48-8d33bd4e1ef3 # Navigation Dots
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4346cef8-2704-4727-8f57-11a6cc32cae4
+            warning: null
+            width: 100
+        name: 'Common Settings'
+        uid: 3a6765dc-be77-4834-9fd3-02759c565821
 handle: home
 hasTitleField: false
 name: Home

@@ -1,4 +1,4 @@
-dateModified: 1657295835
+dateModified: 1658325029
 email:
   fromEmail: admin@kigadu.com
   fromName: kigadu
@@ -42,6 +42,7 @@ meta:
     320cf7ff-af10-4b8b-a766-66c6fc7017ab: Video # Video
     348e7e39-a4c5-4814-a3b8-0f11829c1b57: 'Slide Image' # Slide Image
     460e9153-606d-471c-9368-7dd0e3e9d701: Slide # Slide
+    1972c58d-2f3d-4e4c-aa48-8d33bd4e1ef3: 'Navigation Dots' # Navigation Dots
     3545f6fc-64be-48a7-8474-813dbfe828a1: kigadu # kigadu
     4394af70-ef5d-4e24-80f3-5dc6fff12b9f: 'Slide Title' # Slide Title
     4920f3d7-4f4d-475d-b26b-60dbf97a0dfc: Links # Links
