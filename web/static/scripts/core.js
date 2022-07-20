@@ -14,6 +14,64 @@ const headerTracker = () => {
   }
 }
 
+// Section tracker
+const scrollSection = () => {
+
+  let mainNavigationDot = document.querySelector('.nav-main')
+  let videoNavigationDot = document.querySelector('.nav-video')
+  let functionsNavigationDot = document.querySelector('.nav-functions')
+  let activationNavigationDot = document.querySelector('.nav-activation')
+  let faqNavigationDot = document.querySelector('.nav-faq')
+
+  let main = document.querySelector('.main-download-wrapper')
+  let video = document.querySelector('.video')
+  let functions = document.querySelector('.functions')
+  let activation = document.querySelector('.activation')
+  let faq = document.querySelector('.faq')
+
+  if (window.scrollY + (window.innerHeight/2) >= main.offsetTop 
+    && window.scrollY + (window.innerHeight/2) < main.offsetTop + main.offsetHeight
+  ) {
+    mainNavigationDot.classList.add('active')
+  } else {
+    mainNavigationDot.classList.remove('active')
+  }
+
+  if (window.scrollY + (window.innerHeight/2) >= video.offsetTop 
+    && window.scrollY + (window.innerHeight/2) < video.offsetTop + video.offsetHeight
+  ) {
+    videoNavigationDot.classList.add('active')
+  } else {
+    videoNavigationDot.classList.remove('active')
+  }
+
+  if (window.scrollY + (window.innerHeight/2) >= functions.offsetTop 
+    && window.scrollY + (window.innerHeight/2) < functions.offsetTop + functions.offsetHeight
+  ) {
+    functionsNavigationDot.classList.add('active')
+  } else {
+    functionsNavigationDot.classList.remove('active')
+  }
+
+  if (window.scrollY + (window.innerHeight/2) >= activation.offsetTop 
+    && window.scrollY + (window.innerHeight/2) < activation.offsetTop + activation.offsetHeight
+  ) {
+    activationNavigationDot.classList.add('active')
+  } else {
+    activationNavigationDot.classList.remove('active')
+  }
+
+  if (window.scrollY + (window.innerHeight/2) >= faq.offsetTop 
+    && window.scrollY + (window.innerHeight/2) < faq.offsetTop + faq.offsetHeight
+  ) {
+    faqNavigationDot.classList.add('active')
+  } else {
+    faqNavigationDot.classList.remove('active')
+  }
+}
+
+window.addEventListener('scroll', scrollSection)
+
 // Video controls onclick
 let video = document.querySelector('.video__src')
 
