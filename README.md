@@ -3,7 +3,7 @@
 
 ## Installation
 
-1. clone repo <code>git clone https://github.com/hellsontime/crispy-telegram.git </code>
+1. clone repo <code>git clone https://github.com/alexMstar1/kigadu </code>
 2. go to new directory <code>cd crispy-telegram/</code>
 3. switch to cms branch <code>git checkout cms</code>
 5. copy <code>.env.example</code> and rename it ro <code>.env</code>
